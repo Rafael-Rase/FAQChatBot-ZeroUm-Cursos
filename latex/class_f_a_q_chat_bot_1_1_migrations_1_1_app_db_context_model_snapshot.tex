@@ -1,0 +1,280 @@
+\doxysection{FAQChat\+Bot.\+Migrations.\+App\+Db\+Context\+Model\+Snapshot Class Reference}
+\hypertarget{class_f_a_q_chat_bot_1_1_migrations_1_1_app_db_context_model_snapshot}{}\label{class_f_a_q_chat_bot_1_1_migrations_1_1_app_db_context_model_snapshot}\index{FAQChatBot.Migrations.AppDbContextModelSnapshot@{FAQChatBot.Migrations.AppDbContextModelSnapshot}}
+Inheritance diagram for FAQChat\+Bot.\+Migrations.\+App\+Db\+Context\+Model\+Snapshot\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_f_a_q_chat_bot_1_1_migrations_1_1_app_db_context_model_snapshot}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_f_a_q_chat_bot_1_1_migrations_1_1_app_db_context_model_snapshot_a82f23122883a1ed28fbaa637735ea369}{Build\+Model}} (Model\+Builder model\+Builder)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_app_db_context_model_snapshot_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_app_db_context_model_snapshot_8cs_source}{App\+Db\+Context\+Model\+Snapshot.\+cs}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_f_a_q_chat_bot_1_1_migrations_1_1_app_db_context_model_snapshot_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_f_a_q_chat_bot_1_1_migrations_1_1_app_db_context_model_snapshot_a82f23122883a1ed28fbaa637735ea369}\index{FAQChatBot.Migrations.AppDbContextModelSnapshot@{FAQChatBot.Migrations.AppDbContextModelSnapshot}!BuildModel@{BuildModel}}
+\index{BuildModel@{BuildModel}!FAQChatBot.Migrations.AppDbContextModelSnapshot@{FAQChatBot.Migrations.AppDbContextModelSnapshot}}
+\doxysubsubsection{\texorpdfstring{BuildModel()}{BuildModel()}}
+{\footnotesize\ttfamily \label{class_f_a_q_chat_bot_1_1_migrations_1_1_app_db_context_model_snapshot_a82f23122883a1ed28fbaa637735ea369} 
+override void FAQChat\+Bot.\+Migrations.\+App\+Db\+Context\+Model\+Snapshot.\+Build\+Model (\begin{DoxyParamCaption}\item[{Model\+Builder}]{model\+Builder}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_app_db_context_model_snapshot_8cs_source_l00016}{16}} of file \mbox{\hyperlink{_app_db_context_model_snapshot_8cs_source}{App\+Db\+Context\+Model\+Snapshot.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#pragma\ warning\ disable\ 612,\ 618 }}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasAnnotation(\textcolor{stringliteral}{"{}ProductVersion"{}},\ \textcolor{stringliteral}{"{}9.0.10"{}})}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasAnnotation(\textcolor{stringliteral}{"{}Relational:MaxIdentifierLength"{}},\ 128);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity(\textcolor{stringliteral}{"{}FAQChatBot.Models.Aluno"{}},\ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}\ =>}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id\_Aluno"{}})}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ValueGeneratedOnAdd()}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SqlServerPropertyBuilderExtensions.UseIdentityColumn(\mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id\_Aluno"{}}));}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}CPF"{}})}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .IsRequired()}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(14)}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}nvarchar(14)"{}});}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<DateTime>(\textcolor{stringliteral}{"{}DataCadastro"{}})}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}datetime2"{}});}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Email"{}})}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .IsRequired()}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(150)}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}nvarchar(150)"{}});}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Nome"{}})}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .IsRequired()}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}nvarchar(100)"{}});}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Senha"{}})}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .IsRequired()}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}nvarchar(max)"{}});}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Telefone"{}})}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .IsRequired()}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(15)}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}nvarchar(15)"{}});}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.HasKey(\textcolor{stringliteral}{"{}Id\_Aluno"{}});}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.ToTable(\textcolor{stringliteral}{"{}Alunos"{}});}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity(\textcolor{stringliteral}{"{}FAQChatBot.Models.Categoria"{}},\ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}\ =>}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id\_Categoria"{}})}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ValueGeneratedOnAdd()}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SqlServerPropertyBuilderExtensions.UseIdentityColumn(\mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id\_Categoria"{}}));}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Nome"{}})}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .IsRequired()}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}nvarchar(max)"{}});}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.HasKey(\textcolor{stringliteral}{"{}Id\_Categoria"{}});}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.ToTable(\textcolor{stringliteral}{"{}Categorias"{}});}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity(\textcolor{stringliteral}{"{}FAQChatBot.Models.ChatBot"{}},\ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}\ =>}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id\_ChatBot"{}})}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ValueGeneratedOnAdd()}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SqlServerPropertyBuilderExtensions.UseIdentityColumn(\mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id\_ChatBot"{}}));}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{bool}>(\textcolor{stringliteral}{"{}Permite\_Digitar"{}})}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}bit"{}});}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Texto\_Pergunta"{}})}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .IsRequired()}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}nvarchar(max)"{}});}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.HasKey(\textcolor{stringliteral}{"{}Id\_ChatBot"{}});}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.ToTable(\textcolor{stringliteral}{"{}ChatBots"{}});}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity(\textcolor{stringliteral}{"{}FAQChatBot.Models.Conversa"{}},\ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}\ =>}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id\_Conversa"{}})}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ValueGeneratedOnAdd()}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SqlServerPropertyBuilderExtensions.UseIdentityColumn(\mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id\_Conversa"{}}));}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<DateTime>(\textcolor{stringliteral}{"{}Data\_Fim"{}})}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}datetime2"{}});}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<DateTime>(\textcolor{stringliteral}{"{}Data\_Inicio"{}})}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}datetime2"{}});}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id\_Aluno"{}})}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{bool}>(\textcolor{stringliteral}{"{}Resolvida"{}})}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}bit"{}});}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.HasKey(\textcolor{stringliteral}{"{}Id\_Conversa"{}});}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.HasIndex(\textcolor{stringliteral}{"{}Id\_Aluno"{}});}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.ToTable(\textcolor{stringliteral}{"{}Conversas"{}});}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity(\textcolor{stringliteral}{"{}FAQChatBot.Models.Feedback"{}},\ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}\ =>}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id\_Feedback"{}})}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ValueGeneratedOnAdd()}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SqlServerPropertyBuilderExtensions.UseIdentityColumn(\mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id\_Feedback"{}}));}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Comentario"{}})}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .IsRequired()}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}nvarchar(max)"{}});}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id\_Conversa"{}})}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Nota"{}})}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.HasKey(\textcolor{stringliteral}{"{}Id\_Feedback"{}});}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.HasIndex(\textcolor{stringliteral}{"{}Id\_Conversa"{}});}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.ToTable(\textcolor{stringliteral}{"{}Feedbacks"{}});}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity(\textcolor{stringliteral}{"{}FAQChatBot.Models.OpcoesChatBot"{}},\ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}\ =>}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id\_Opcao"{}})}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ValueGeneratedOnAdd()}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SqlServerPropertyBuilderExtensions.UseIdentityColumn(\mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id\_Opcao"{}}));}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{bool}>(\textcolor{stringliteral}{"{}Gera\_Email"{}})}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}bit"{}});}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id\_ChatBot"{}})}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Texto\_Opcao"{}})}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .IsRequired()}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}nvarchar(max)"{}});}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.HasKey(\textcolor{stringliteral}{"{}Id\_Opcao"{}});}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.HasIndex(\textcolor{stringliteral}{"{}Id\_ChatBot"{}});}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.ToTable(\textcolor{stringliteral}{"{}OpcoesChatBots"{}});}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity(\textcolor{stringliteral}{"{}FAQChatBot.Models.Pergunta"{}},\ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}\ =>}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id\_Pergunta"{}})}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ValueGeneratedOnAdd()}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SqlServerPropertyBuilderExtensions.UseIdentityColumn(\mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id\_Pergunta"{}}));}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<DateTime>(\textcolor{stringliteral}{"{}Data\_Criacao"{}})}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}datetime2"{}});}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id\_Categoria"{}})}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Texto\_Pergunta"{}})}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .IsRequired()}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}nvarchar(max)"{}});}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}resposta"{}})}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .IsRequired()}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}nvarchar(max)"{}});}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.HasKey(\textcolor{stringliteral}{"{}Id\_Pergunta"{}});}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.HasIndex(\textcolor{stringliteral}{"{}Id\_Categoria"{}});}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.ToTable(\textcolor{stringliteral}{"{}Perguntas"{}});}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity(\textcolor{stringliteral}{"{}FAQChatBot.Models.Conversa"{}},\ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}\ =>}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.HasOne(\textcolor{stringliteral}{"{}FAQChatBot.Models.Aluno"{}},\ \textcolor{stringliteral}{"{}Aluno"{}})}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .WithMany()}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasForeignKey(\textcolor{stringliteral}{"{}Id\_Aluno"{}})}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnDelete(DeleteBehavior.Cascade)}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .IsRequired();}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Navigation(\textcolor{stringliteral}{"{}Aluno"{}});}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity(\textcolor{stringliteral}{"{}FAQChatBot.Models.Feedback"{}},\ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}\ =>}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.HasOne(\textcolor{stringliteral}{"{}FAQChatBot.Models.Conversa"{}},\ \textcolor{stringliteral}{"{}Conversa"{}})}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .WithMany()}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasForeignKey(\textcolor{stringliteral}{"{}Id\_Conversa"{}})}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnDelete(DeleteBehavior.Cascade)}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .IsRequired();}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Navigation(\textcolor{stringliteral}{"{}Conversa"{}});}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00229\ }
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity(\textcolor{stringliteral}{"{}FAQChatBot.Models.OpcoesChatBot"{}},\ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}\ =>}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.HasOne(\textcolor{stringliteral}{"{}FAQChatBot.Models.ChatBot"{}},\ \textcolor{stringliteral}{"{}ChatBot"{}})}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .WithMany()}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasForeignKey(\textcolor{stringliteral}{"{}Id\_ChatBot"{}})}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnDelete(DeleteBehavior.Cascade)}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .IsRequired();}
+\DoxyCodeLine{00237\ }
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Navigation(\textcolor{stringliteral}{"{}ChatBot"{}});}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity(\textcolor{stringliteral}{"{}FAQChatBot.Models.Pergunta"{}},\ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}\ =>}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.HasOne(\textcolor{stringliteral}{"{}FAQChatBot.Models.Categoria"{}},\ \textcolor{stringliteral}{"{}Categoria"{}})}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .WithMany()}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasForeignKey(\textcolor{stringliteral}{"{}Id\_Categoria"{}})}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnDelete(DeleteBehavior.Cascade)}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .IsRequired();}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4026ad5544b958e54ce5e106fa1c805}{b}}.Navigation(\textcolor{stringliteral}{"{}Categoria"{}});}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00251\ \textcolor{preprocessor}{\#pragma\ warning\ restore\ 612,\ 618 }}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+FAQChat\+Bot/\+Migrations/\mbox{\hyperlink{_app_db_context_model_snapshot_8cs}{App\+Db\+Context\+Model\+Snapshot.\+cs}}\end{DoxyCompactItemize}

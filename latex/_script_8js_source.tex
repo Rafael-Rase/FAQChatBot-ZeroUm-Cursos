@@ -1,0 +1,119 @@
+\doxysection{Script.\+js}
+\hypertarget{_script_8js_source}{}\label{_script_8js_source}\index{FAQChatBot/wwwroot/js/Script.js@{FAQChatBot/wwwroot/js/Script.js}}
+\mbox{\hyperlink{_script_8js}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00002}00002\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00003}00003\ \textcolor{comment}{//\ Aguarda\ o\ carregamento\ completo\ do\ documento\ HTML\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00004}00004\ \textcolor{comment}{document.addEventListener('DOMContentLoaded',\ function\ ()\ \{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00005}00005\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00006}00006\ \textcolor{comment}{\ \ \ \ //\ 1.\ Seleciona\ o\ formulário\ de\ login\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00007}00007\ \textcolor{comment}{\ \ \ \ const\ loginForm\ =\ document.querySelector('.login-\/box\ form');}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00008}00008\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00009}00009\ \textcolor{comment}{\ \ \ \ //\ 2.\ Adiciona\ um\ "{}ouvinte\ de\ evento"{}\ (event\ listener)\ para\ o\ envio\ do\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00010}00010\ \textcolor{comment}{\ \ \ \ formulário}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00011}00011\ \textcolor{comment}{\ \ \ \ loginForm.addEventListener('submit',\ function\ (event)\ \{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00012}00012\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00013}00013\ \textcolor{comment}{\ \ \ \ \ \ \ \ //\ Impede\ o\ envio\ padrão\ do\ formulário\ (para\ que\ o\ JavaScript\ possa\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00014}00014\ \textcolor{comment}{\ \ \ \ \ \ \ \ validá\ -\/\ lo\ primeiro)}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00015}00015\ \textcolor{comment}{\ \ \ \ event.preventDefault();}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00016}00016\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00017}00017\ \textcolor{comment}{\ \ \ \ //\ 3.\ Seleciona\ os\ campos\ de\ input\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00018}00018\ \textcolor{comment}{\ \ \ \ const\ emailInput\ =\ document.getElementById('email');}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00019}00019\ \textcolor{comment}{\ \ \ \ const\ passwordInput\ =\ document.getElementById('senha');}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00020}00020\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00021}00021\ \textcolor{comment}{\ \ \ \ //\ 4.\ Obtém\ os\ valores\ dos\ campos\ (removendo\ espaços\ em\ branco\ no\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00022}00022\ \textcolor{comment}{\ \ \ \ início\ /\ fim)}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00023}00023\ \textcolor{comment}{const\ email\ =\ emailInput.value.trim();}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00024}00024\ \textcolor{comment}{const\ senha\ =\ passwordInput.value.trim();}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00025}00025\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00026}00026\ \textcolor{comment}{//\ 5.\ Lógica\ de\ Validação\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00027}00027\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00028}00028\ \textcolor{comment}{//\ Verifica\ se\ o\ campo\ e-\/mail\ está\ vazio\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00029}00029\ \textcolor{comment}{if\ (email\ ===\ '')\ \{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00030}00030\ \textcolor{comment}{\ \ \ \ alert('Por\ favor,\ preencha\ o\ campo\ E-\/mail.');}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00031}00031\ \textcolor{comment}{\ \ \ \ emailInput.focus();\ //\ Coloca\ o\ foco\ no\ campo\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00032}00032\ \textcolor{comment}{\ \ \ \ return;\ //\ Interrompe\ a\ função\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00033}00033\ \textcolor{comment}{\}}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00034}00034\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00035}00035\ \textcolor{comment}{//\ Verifica\ se\ o\ campo\ senha\ está\ vazio\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00036}00036\ \textcolor{comment}{if\ (senha\ ===\ '')\ \{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00037}00037\ \textcolor{comment}{\ \ \ \ alert('Por\ favor,\ preencha\ o\ campo\ Senha.');}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00038}00038\ \textcolor{comment}{\ \ \ \ passwordInput.focus();\ //\ Coloca\ o\ foco\ no\ campo\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00039}00039\ \textcolor{comment}{\ \ \ \ return;\ //\ Interrompe\ a\ função\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00040}00040\ \textcolor{comment}{\}}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00041}00041\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00042}00042\ \textcolor{comment}{//\ Validação\ adicional\ de\ formato\ de\ e-\/mail\ (regex\ simples)\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00043}00043\ \textcolor{comment}{//\ Isso\ verifica\ se\ o\ e-\/mail\ tem\ o\ padrão\ 'texto@texto.dominio'\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00044}00044\ \textcolor{comment}{const\ emailPattern\ =\ /\string^[\string^\(\backslash\)s@]+@[\string^\(\backslash\)s@]+\(\backslash\).[\string^\(\backslash\)s@]+\$/;}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00045}00045\ \textcolor{comment}{if\ (!emailPattern.test(email))\ \{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00046}00046\ \textcolor{comment}{\ \ \ \ alert('Por\ favor,\ insira\ um\ endereço\ de\ E-\/mail\ válido.');}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00047}00047\ \textcolor{comment}{\ \ \ \ emailInput.focus();}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00048}00048\ \textcolor{comment}{\ \ \ \ return;}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00049}00049\ \textcolor{comment}{\}}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00050}00050\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00051}00051\ \textcolor{comment}{//\ Se\ todas\ as\ validações\ passarem:\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00052}00052\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00053}00053\ \textcolor{comment}{//\ AQUI\ você\ faria\ a\ chamada\ real\ para\ o\ servidor\ (API)\ para\ autenticação.\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00054}00054\ \textcolor{comment}{//\ Neste\ exemplo,\ vamos\ apenas\ simular\ um\ login\ bem-\/sucedido.\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00055}00055\ \textcolor{comment}{console.log('Dados\ prontos\ para\ envio:',\ \{\ email:\ email,\ senha:\ senha\ \});}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00056}00056\ \textcolor{comment}{alert('Login\ bem-\/sucedido!\ Redirecionando...');}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00057}00057\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00058}00058\ \textcolor{comment}{//\ Descomente\ a\ linha\ abaixo\ para\ enviar\ o\ formulário\ normalmente,\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00059}00059\ \textcolor{comment}{//\ ou\ substitua\ por\ window.location.href\ para\ redirecionar\ o\ usuário.\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00060}00060\ \textcolor{comment}{//\ loginForm.submit();\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00061}00061\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00062}00062\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00063}00063\ \textcolor{comment}{//\ ...\ Se\ todas\ as\ validações\ passarem:\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00064}00064\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00065}00065\ \textcolor{comment}{console.log('Dados\ prontos\ para\ envio:',\ \{\ email:\ email,\ senha:\ senha\ \});}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00066}00066\ \textcolor{comment}{//\ alert('Login\ bem-\/sucedido!\ Redirecionando...');\ //\ Comente\ ou\ remova\ esta\ linha\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00067}00067\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00068}00068\ \textcolor{comment}{//\ REDIRECIONA\ PARA\ O\ DASHBOARD\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00069}00069\ \textcolor{comment}{window.location.href\ =\ 'dashboard.html';}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00070}00070\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00071}00071\ \textcolor{comment}{//\ DENTRO\ DE\ document.addEventListener('DOMContentLoaded',\ function()\ \{\ ...\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00072}00072\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00073}00073\ \textcolor{comment}{//\ -\/-\/-\/\ LÓGICA\ DE\ RECUPERAÇÃO\ DE\ SENHA\ -\/-\/-\/\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00074}00074\ \textcolor{comment}{const\ recuperarSenhaForm\ =\ document.getElementById('recuperarSenhaForm');}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00075}00075\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00076}00076\ \textcolor{comment}{if\ (recuperarSenhaForm)\ \{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00077}00077\ \textcolor{comment}{\ \ \ \ recuperarSenhaForm.addEventListener('submit',\ function\ (event)\ \{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00078}00078\ \textcolor{comment}{\ \ \ \ \ \ \ \ event.preventDefault();}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00079}00079\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00080}00080\ \textcolor{comment}{\ \ \ \ \ \ \ \ const\ emailInput\ =\ document.getElementById('email\_recuperacao');}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00081}00081\ \textcolor{comment}{\ \ \ \ \ \ \ \ const\ email\ =\ emailInput.value.trim();}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00082}00082\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00083}00083\ \textcolor{comment}{\ \ \ \ \ \ \ \ const\ emailPattern\ =\ /\string^[\string^\(\backslash\)s@]+@[\string^\(\backslash\)s@]+\(\backslash\).[\string^\(\backslash\)s@]+\$/;}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00084}00084\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00085}00085\ \textcolor{comment}{\ \ \ \ \ \ \ \ if\ (email\ ===\ '')\ \{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00086}00086\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ alert('Por\ favor,\ preencha\ o\ campo\ E-\/mail.');}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00087}00087\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ emailInput.focus();}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00088}00088\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ return;}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00089}00089\ \textcolor{comment}{\ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00090}00090\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00091}00091\ \textcolor{comment}{\ \ \ \ \ \ \ \ if\ (!emailPattern.test(email))\ \{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00092}00092\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ alert('Por\ favor,\ insira\ um\ endereço\ de\ E-\/mail\ válido.');}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00093}00093\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ emailInput.focus();}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00094}00094\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ return;}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00095}00095\ \textcolor{comment}{\ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00096}00096\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00097}00097\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ //\ Simulação\ de\ sucesso:\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00098}00098\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ //\ Na\ vida\ real,\ o\ código\ aqui\ faria\ uma\ requisição\ ao\ servidor\ para\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00099}00099\ \textcolor{comment}{enviar\ o\ link.}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00100}00100\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ console.log('Solicitação\ de\ recuperação\ enviada\ para:',\ email);}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00101}00101\ \textcolor{comment}{\ \ \ \ \ \ \ \ alert(`Instruções\ de\ redefinição\ de\ senha\ foram\ enviadas\ para\ \$\{email\}.\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00102}00102\ \textcolor{comment}{Verifique\ sua\ caixa\ de\ entrada.`);}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00103}00103\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00104}00104\ \textcolor{comment}{\ \ \ \ \ \ \ \ //\ Opcional:\ Redirecionar\ para\ a\ página\ de\ login\ após\ o\ aviso\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00105}00105\ \textcolor{comment}{\ \ \ \ \ \ \ \ window.location.href\ =\ 'index.html';\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00106}00106\ \textcolor{comment}{\ \ \ \ \});}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00107}00107\ \textcolor{comment}{\}}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00108}00108\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00109}00109\ \textcolor{comment}{\ \ \ //\ ...\ (Seu\ código\ de\ validação\ de\ Login/Cadastro\ continua\ aqui)\ ...\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00110}00110\ \textcolor{comment}{\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00111}00111\ \textcolor{comment}{\});\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00112}00112\ \textcolor{comment}{\ }}
+\DoxyCodeLine{\Hypertarget{_script_8js_source_l00113}00113\ \textcolor{comment}{\});\ }}
+
+\end{DoxyCode}

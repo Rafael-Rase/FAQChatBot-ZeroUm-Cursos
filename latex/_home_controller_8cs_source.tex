@@ -1,0 +1,115 @@
+\doxysection{Home\+Controller.\+cs}
+\hypertarget{_home_controller_8cs_source}{}\label{_home_controller_8cs_source}\index{FAQChatBot/Controllers/HomeController.cs@{FAQChatBot/Controllers/HomeController.cs}}
+\mbox{\hyperlink{_home_controller_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }BCrypt.Net;}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_f_a_q_chat_bot_1_1_models}{FAQChatBot.Models}};}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }Microsoft.AspNetCore.Mvc;}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }Microsoft.EntityFrameworkCore;}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00006}\mbox{\hyperlink{class_home_controller}{00006}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_home_controller_a5d6bb77b0101d955c3422ac60e1b50df}{HomeController}}\ :\ Controller}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00009}00009\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_app_db_context}{AppDbContext}}\ \_context;}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00011}\mbox{\hyperlink{class_home_controller_a5d6bb77b0101d955c3422ac60e1b50df}{00011}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_home_controller_a5d6bb77b0101d955c3422ac60e1b50df}{HomeController}}(\mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_app_db_context}{AppDbContext}}\ context)}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00012}00012\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \_context\ =\ context;}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00014}00014\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00018}\mbox{\hyperlink{class_home_controller_a7d8c75f70ce2e10e4c850b125aba2c00}{00018}}\ \ \ \ \ \textcolor{keyword}{public}\ IActionResult\ \mbox{\hyperlink{class_home_controller_a7d8c75f70ce2e10e4c850b125aba2c00}{Index}}()}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00019}00019\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View();}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00021}00021\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00023}\mbox{\hyperlink{class_home_controller_a0ad6d4431a7729ac62fb5a1fd04e90a2}{00023}}\ \ \ \ \ \textcolor{keyword}{public}\ IActionResult\ \mbox{\hyperlink{class_home_controller_a0ad6d4431a7729ac62fb5a1fd04e90a2}{RecuperarSenha}}()}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00024}00024\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View();}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00026}00026\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00029}\mbox{\hyperlink{class_home_controller_ab2ce812cd996a5715583ca70182bdc43}{00029}}\ \ \ \ \ \textcolor{keyword}{public}\ IActionResult\ \mbox{\hyperlink{class_home_controller_ab2ce812cd996a5715583ca70182bdc43}{Dashboard}}()}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00030}00030\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View();}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00034}00034\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00036}\mbox{\hyperlink{class_home_controller_ad11a650ff0b97a90ce720a1159436dac}{00036}}\ \ \ \ \ \textcolor{keyword}{public}\ IActionResult\ \mbox{\hyperlink{class_home_controller_ad11a650ff0b97a90ce720a1159436dac}{Faq}}()}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00037}00037\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View();}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00040}00040\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00042}\mbox{\hyperlink{class_home_controller_a958884072d8c5f70689734181f3b9e64}{00042}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<IActionResult>\ \mbox{\hyperlink{class_home_controller_a958884072d8c5f70689734181f3b9e64}{Cadastro}}(\mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_aluno}{Aluno}}\ novoAluno)}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00043}00043\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ModelState.IsValid)}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrEmpty(novoAluno.\mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_aluno_a4c420544e72ff65adb270a651b55c50a}{Senha}}))}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ModelState.AddModelError(\textcolor{stringliteral}{"{}Senha"{}},\ \textcolor{stringliteral}{"{}A\ senha\ é obrigatória."{}});}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View(novoAluno);}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ novoAluno.Senha\ =\ BCrypt.Net.BCrypt.HashPassword(novoAluno.\mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_aluno_a4c420544e72ff65adb270a651b55c50a}{Senha}});}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ novoAluno.DataCadastro\ =\ DateTime.Now;}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \_context.Alunos.Add(novoAluno);}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_context.SaveChangesAsync();}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ RedirectToAction(\textcolor{stringliteral}{"{}Index"{}});}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View(novoAluno);}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00070}00070\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00072}00072\ \ \ \ \ [HttpPost]}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00073}\mbox{\hyperlink{class_home_controller_afef8d1b46d189bed02fce1f03a529472}{00073}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<IActionResult>\ \mbox{\hyperlink{class_home_controller_afef8d1b46d189bed02fce1f03a529472}{Login}}(\textcolor{keywordtype}{string}\ email,\ \textcolor{keywordtype}{string}\ senha)}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00074}00074\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrEmpty(email)\ ||\ \textcolor{keywordtype}{string}.IsNullOrEmpty(senha))}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ ViewData[\textcolor{stringliteral}{"{}Erro"{}}]\ =\ \textcolor{stringliteral}{"{}E-\/mail\ e\ senha\ são obrigatórios."{}};}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View(\textcolor{stringliteral}{"{}Index"{}});}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ var\ alunoDoBanco\ =\ await\ \_context.Alunos}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .FirstOrDefaultAsync(\mbox{\hyperlink{jquery_8validate_8min_8js_aa4d4888597588a84fd5b1184d00c91f3}{a}}\ =>\ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4d4888597588a84fd5b1184d00c91f3}{a}}.Email\ ==\ email);}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (alunoDoBanco\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ ViewData[\textcolor{stringliteral}{"{}Erro"{}}]\ =\ \textcolor{stringliteral}{"{}Usuário\ ou\ senha\ inválidos."{}};}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View(\textcolor{stringliteral}{"{}Index"{}});}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ senhaEstaCorreta\ =\ BCrypt.Net.BCrypt.Verify(senha,\ alunoDoBanco.Senha);}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (senhaEstaCorreta)}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//return\ RedirectToAction("{}Dashboard"{});}}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ RedirectToAction(\textcolor{stringliteral}{"{}Dashboard"{}},\ \textcolor{stringliteral}{"{}Home"{}});}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ ViewData[\textcolor{stringliteral}{"{}Erro"{}}]\ =\ \textcolor{stringliteral}{"{}Usuário\ ou\ senha\ inválidos."{}};}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View(\textcolor{stringliteral}{"{}Index"{}});}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00108}00108\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_home_controller_8cs_source_l00109}00109\ \}}
+
+\end{DoxyCode}

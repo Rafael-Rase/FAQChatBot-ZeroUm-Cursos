@@ -1,0 +1,143 @@
+\doxysection{FAQChat\+Bot.\+Services.\+Gemini\+Chat\+Service Class Reference}
+\hypertarget{class_f_a_q_chat_bot_1_1_services_1_1_gemini_chat_service}{}\label{class_f_a_q_chat_bot_1_1_services_1_1_gemini_chat_service}\index{FAQChatBot.Services.GeminiChatService@{FAQChatBot.Services.GeminiChatService}}
+Inheritance diagram for FAQChat\+Bot.\+Services.\+Gemini\+Chat\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_f_a_q_chat_bot_1_1_services_1_1_gemini_chat_service}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_f_a_q_chat_bot_1_1_services_1_1_gemini_chat_service_a795d03dfdedd7bbf3ccedfd6f6f25ae5}{Gemini\+Chat\+Service}} (\mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_app_db_context}{App\+Db\+Context}} context, IConfiguration configuration, Http\+Client http\+Client)
+\item 
+async Task$<$ string $>$ \mbox{\hyperlink{class_f_a_q_chat_bot_1_1_services_1_1_gemini_chat_service_a8ac102335da6ba332558be8b59a220eb}{Obter\+Resposta\+IAAsync}} (string pergunta\+Usuario)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_gemini_chat_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_gemini_chat_8cs_source}{Gemini\+Chat.\+cs}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_f_a_q_chat_bot_1_1_services_1_1_gemini_chat_service_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_f_a_q_chat_bot_1_1_services_1_1_gemini_chat_service_a795d03dfdedd7bbf3ccedfd6f6f25ae5}\index{FAQChatBot.Services.GeminiChatService@{FAQChatBot.Services.GeminiChatService}!GeminiChatService@{GeminiChatService}}
+\index{GeminiChatService@{GeminiChatService}!FAQChatBot.Services.GeminiChatService@{FAQChatBot.Services.GeminiChatService}}
+\doxysubsubsection{\texorpdfstring{GeminiChatService()}{GeminiChatService()}}
+{\footnotesize\ttfamily \label{class_f_a_q_chat_bot_1_1_services_1_1_gemini_chat_service_a795d03dfdedd7bbf3ccedfd6f6f25ae5} 
+FAQChat\+Bot.\+Services.\+Gemini\+Chat\+Service.\+Gemini\+Chat\+Service (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_app_db_context}{App\+Db\+Context}}}]{context}{, }\item[{IConfiguration}]{configuration}{, }\item[{Http\+Client}]{http\+Client}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_gemini_chat_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_gemini_chat_8cs_source}{Gemini\+Chat.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \_context\ =\ context;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \_httpClient\ =\ httpClient;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \_apiKey\ =\ configuration[\textcolor{stringliteral}{"{}Gemini:ApiKey"{}}]\ ??\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ InvalidOperationException(\textcolor{stringliteral}{"{}A\ chave\ de\ API\ do\ Gemini\ não\ foi\ configurada\ em\ appsettings.json."{}});}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_f_a_q_chat_bot_1_1_services_1_1_gemini_chat_service_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_f_a_q_chat_bot_1_1_services_1_1_gemini_chat_service_a8ac102335da6ba332558be8b59a220eb}\index{FAQChatBot.Services.GeminiChatService@{FAQChatBot.Services.GeminiChatService}!ObterRespostaIAAsync@{ObterRespostaIAAsync}}
+\index{ObterRespostaIAAsync@{ObterRespostaIAAsync}!FAQChatBot.Services.GeminiChatService@{FAQChatBot.Services.GeminiChatService}}
+\doxysubsubsection{\texorpdfstring{ObterRespostaIAAsync()}{ObterRespostaIAAsync()}}
+{\footnotesize\ttfamily \label{class_f_a_q_chat_bot_1_1_services_1_1_gemini_chat_service_a8ac102335da6ba332558be8b59a220eb} 
+async Task$<$ string $>$ FAQChat\+Bot.\+Services.\+Gemini\+Chat\+Service.\+Obter\+Resposta\+IAAsync (\begin{DoxyParamCaption}\item[{string}]{pergunta\+Usuario}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_f_a_q_chat_bot_1_1_services_1_1_i_chat_service_a4c0ef0f7ec5afb2f5a076d3886412647}{FAQChat\+Bot.\+Services.\+IChat\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{_gemini_chat_8cs_source_l00029}{29}} of file \mbox{\hyperlink{_gemini_chat_8cs_source}{Gemini\+Chat.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ var\ faqContexto\ =\ await\ \_context.Perguntas}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Where(\mbox{\hyperlink{jquery_8min_8js_a8c4bb014db8f5c540317a3b78d237be3}{p}}\ =>\ \mbox{\hyperlink{jquery_8min_8js_a8c4bb014db8f5c540317a3b78d237be3}{p}}.Texto\_Pergunta.Contains(perguntaUsuario)\ ||\ \mbox{\hyperlink{jquery_8min_8js_a8c4bb014db8f5c540317a3b78d237be3}{p}}.resposta.Contains(perguntaUsuario))}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Take(5)}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ToListAsync();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ var\ contextoFormatado\ =\ \textcolor{keywordtype}{string}.Join(\textcolor{stringliteral}{"{}\(\backslash\)n-\/-\/-\/\(\backslash\)n"{}},\ faqContexto.Select(\mbox{\hyperlink{jquery_8min_8js_a9cf09a2972472098a4c689fd988f4dfc}{f}}\ =>\ \mbox{\hyperlink{bootstrap_8bundle_8js_aa9b54a630db023a86f3786d6e4bf1de2}{\$}}\textcolor{stringliteral}{"{}Pergunta:\ \{f.Texto\_Pergunta\}\(\backslash\)nResposta:\ \{f.resposta\}"{}}));}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ var\ systemInstruction\ =\ \textcolor{stringliteral}{\$@"{}Você\ é\ um\ chatbot\ de\ suporte\ técnico\ amigável.\ Use\ o\ 'CONTEXTO'\ fornecido\ abaixo\ para\ responder\ às\ perguntas\ do\ usuário.\ Se\ o\ contexto\ não\ contiver\ a\ resposta,\ diga\ 'Não\ encontrei\ a\ informação\ no\ FAQ,\ por\ favor,\ tente\ reformular\ sua\ pergunta\ ou\ entre\ em\ contato\ com\ o\ suporte.'\ CONTEXTO:\ \{contextoFormatado\}"{}};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ var\ requestPayload\ =\ \textcolor{keyword}{new}\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ contents\ =\ \textcolor{keyword}{new}[]}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ role\ =\ \textcolor{stringliteral}{"{}user"{}},}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ parts\ =\ \textcolor{keyword}{new}[]}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ \{\ \mbox{\hyperlink{jquery_8js_a95b91e2a7e965b381c9e803999f9d290}{text}}\ =\ systemInstruction\ \},}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ \{\ \mbox{\hyperlink{jquery_8js_a95b91e2a7e965b381c9e803999f9d290}{text}}\ =\ perguntaUsuario\ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ var\ jsonContent\ =\ \textcolor{keyword}{new}\ StringContent(}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ JsonSerializer.Serialize(requestPayload),}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Encoding.UTF8,}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}application/json"{}}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_httpClient.PostAsync(\mbox{\hyperlink{bootstrap_8bundle_8js_aa9b54a630db023a86f3786d6e4bf1de2}{\$}}\textcolor{stringliteral}{"{}\{GEMINI\_API\_URL\}\{\_apiKey\}"{}},\ jsonContent);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!response.IsSuccessStatusCode)}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ errorBody\ =\ await\ response.Content.ReadAsStringAsync();}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{bootstrap_8bundle_8js_aa9b54a630db023a86f3786d6e4bf1de2}{\$}}\textcolor{stringliteral}{"{}Desculpe,\ a\ chamada\ à\ API\ falhou\ com\ status\ \{response.StatusCode\}.\ Detalhe:\ \{errorBody\}"{}};}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ var\ jsonResponse\ =\ await\ response.Content.ReadAsStringAsync();}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{using}\ (JsonDocument\ doc\ =\ JsonDocument.Parse(jsonResponse))}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ root\ =\ doc.RootElement;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (root.TryGetProperty(\textcolor{stringliteral}{"{}candidates"{}},\ out\ JsonElement\ candidates)\ \&\&\ candidates.GetArrayLength()\ >\ 0)}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (candidates[0].TryGetProperty(\textcolor{stringliteral}{"{}content"{}},\ out\ JsonElement\ content)\ \&\&\ content.TryGetProperty(\textcolor{stringliteral}{"{}parts"{}},\ out\ JsonElement\ parts)\ \&\&\ parts.GetArrayLength()\ >\ 0)}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (parts[0].TryGetProperty(\textcolor{stringliteral}{"{}text"{}},\ out\ JsonElement\ \mbox{\hyperlink{jquery_8js_a95b91e2a7e965b381c9e803999f9d290}{text}}))}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{jquery_8js_a95b91e2a7e965b381c9e803999f9d290}{text}}.GetString()\ ??\ \textcolor{stringliteral}{"{}Resposta\ gerada,\ mas\ texto\ vazio."{}};}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}A\ IA\ não\ conseguiu\ gerar\ uma\ resposta\ válida.\ Tente\ novamente."{}};}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+FAQChat\+Bot/\+Services/\mbox{\hyperlink{_gemini_chat_8cs}{Gemini\+Chat.\+cs}}\end{DoxyCompactItemize}

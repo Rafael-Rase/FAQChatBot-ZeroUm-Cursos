@@ -1,0 +1,43 @@
+\doxysection{Aluno.\+cs}
+\hypertarget{_aluno_8cs_source}{}\label{_aluno_8cs_source}\index{FAQChatBot/Models/Aluno.cs@{FAQChatBot/Models/Aluno.cs}}
+\mbox{\hyperlink{_aluno_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.ComponentModel.DataAnnotations;}
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.ComponentModel.DataAnnotations.Schema;}
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00005}\mbox{\hyperlink{namespace_f_a_q_chat_bot_1_1_models}{00005}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_f_a_q_chat_bot_1_1_models}{FAQChatBot.Models}}}
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00007}\mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_aluno}{00007}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_aluno}{Aluno}}}
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00008}00008\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [Key]}
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00010}\mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_aluno_a428f46c6d4cc5974a7fa8a90e1a8ce6b}{00010}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_aluno_a428f46c6d4cc5974a7fa8a90e1a8ce6b}{Id\_Aluno}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [Required(ErrorMessage\ =\ \textcolor{stringliteral}{"{}O\ nome\ é\ obrigatório."{}})]}
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [StringLength(100)]}
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00014}\mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_aluno_acecdf62c30adb17ee7808a71fa828adb}{00014}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_aluno_acecdf62c30adb17ee7808a71fa828adb}{Nome}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ }
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ [Required(ErrorMessage\ =\ \textcolor{stringliteral}{"{}O\ CPF\ é\ obrigatório."{}})]}
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ [StringLength(14)]}
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00018}\mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_aluno_a9cee95fe8c49102113e54e6123408632}{00018}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_aluno_a9cee95fe8c49102113e54e6123408632}{CPF}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ }
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ [Required(ErrorMessage\ =\ \textcolor{stringliteral}{"{}O\ E-\/mail\ é\ obrigatório."{}})]}
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ [EmailAddress(ErrorMessage\ =\ \textcolor{stringliteral}{"{}E-\/mail\ inválido."{}})]}
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ [StringLength(150)]}
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00023}\mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_aluno_a34055055688021a9ef6854d692c09dc6}{00023}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_aluno_a34055055688021a9ef6854d692c09dc6}{Email}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ }
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ [Required(ErrorMessage\ =\ \textcolor{stringliteral}{"{}O\ telefone\ é\ obrigatório."{}})]}
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ [StringLength(15)]}
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00027}\mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_aluno_a1b2c496a994e19e93c3af01a7e4cbbf8}{00027}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_aluno_a1b2c496a994e19e93c3af01a7e4cbbf8}{Telefone}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ }
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ [Required(ErrorMessage\ =\ \textcolor{stringliteral}{"{}A\ senha\ é\ obrigatória."{}})]}
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ [DataType(DataType.Password)]}
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00032}\mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_aluno_a4c420544e72ff65adb270a651b55c50a}{00032}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_aluno_a4c420544e72ff65adb270a651b55c50a}{Senha}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ }
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00034}\mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_aluno_a77ee542dd2acd759a56d9d49235207a9}{00034}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DateTime\ \mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_aluno_a77ee542dd2acd759a56d9d49235207a9}{DataCadastro}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_aluno_8cs_source_l00037}00037\ \}}
+
+\end{DoxyCode}

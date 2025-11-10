@@ -1,0 +1,100 @@
+\doxysection{Cadastro.\+cshtml}
+\hypertarget{_cadastro_8cshtml_source}{}\label{_cadastro_8cshtml_source}\index{FAQChatBot/Views/Home/Cadastro.cshtml@{FAQChatBot/Views/Home/Cadastro.cshtml}}
+\mbox{\hyperlink{_cadastro_8cshtml}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00001}00001\ <!DOCTYPE\ html>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00002}00002\ <html\ lang="{}pt-\/BR"{}>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00003}00003\ <head>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00004}00004\ \ \ \ \ <meta\ charset="{}UTF-\/8"{}>\ <!-\/-\/\ garantindo\ acentos\ e\ caracteres\ especiais\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00005}00005\ \ \ \ \ <meta\ name="{}viewport"{}\ content="{}width=device-\/width,\ initial-\/scale=1.0"{}>\ <!-\/-\/\ responsivo\ em\ celulares\ e\ tablets\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00006}00006\ \ \ \ \ <title>Cadastro\ -\/\ ZeroUm\ Cursos</title>\ <!-\/-\/\ Título\ do\ navegador\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00009}00009\ \ \ \ \ <!-\/-\/\ CSS\ principal\ do\ site\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00010}00010\ \ \ \ \ <link\ rel="{}stylesheet"{}\ href="{}\string~/css/styles.css"{}>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00011}00011\ </head>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00012}00012\ <body>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00013}00013\ \ \ \ \ <!-\/-\/\ Container\ principal\ que\ segura\ todo\ o\ conteúdo\ da\ página\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00014}00014\ \ \ \ \ <div\ class="{}container"{}>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00016}00016\ \ \ \ \ \ \ \ \ <!-\/-\/\ Área\ do\ logo\ e\ slogan\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00017}00017\ \ \ \ \ \ \ \ \ <div\ class="{}logo-\/text-\/area"{}>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ <h1>Zero\ Um\ Cursos</h1>\ <!-\/-\/\ Título\ principal\ da\ página\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ <img\ src="{}\string~/images/logo\_zero\_um.png"{}}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ alt="{}Logo\ ZeroUm\ Cursos\ -\/\ Desenvolva\ com\ Tecnologia"{}>\ <!-\/-\/\ Logo\ da\ empresa,\ alt\ é\ o\ texto\ alternativo\ caso\ a\ imagem\ não\ carregue\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ <p>Desenvolva\ sua\ carreira\ em\ Tecnologia!</p>\ }
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00022}00022\ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00024}00024\ \ \ \ \ \ \ \ \ <!-\/-\/\ Área\ do\ formulário\ de\ cadastro\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00025}00025\ \ \ \ \ \ \ \ \ <div\ class="{}login-\/area"{}>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ <div\ class="{}login-\/box"{}>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <h2>Crie\ sua\ conta</h2>\ <!-\/-\/\ Subtítulo\ da\ caixa\ de\ cadastro\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <!-\/-\/\ Formulário\ de\ cadastro\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <form\ id="{}cadastroForm"{}>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <!-\/-\/\ Grupo\ de\ input:\ Nome\ completo\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ class="{}input-\/group"{}>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ for="{}nome"{}>Nome\ Completo</label>\ <!-\/-\/\ Texto\ que\ explica\ o\ campo\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type="{}text"{}\ id="{}nome"{}\ name="{}nome"{}\ required\ placeholder="{}Seu\ nome"{}>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <!-\/-\/\ Grupo\ de\ input:\ CPF\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ class="{}input-\/group"{}>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ for="{}cpf\_cadastro"{}>CPF</label>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type="{}text"{}\ id="{}cpf\_cadastro"{}\ name="{}cpf"{}\ required\ placeholder="{}cpf\ (sem\ pontuação\ e\ barra)"{}>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <!-\/-\/\ Grupo\ de\ input:\ E-\/mail\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ class="{}input-\/group"{}>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ for="{}email\_cadastro"{}>E-\/mail</label>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type="{}email"{}\ id="{}email\_cadastro"{}\ name="{}email"{}\ required\ placeholder="{}seu@email.com"{}>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <!-\/-\/\ Grupo\ de\ input:\ Telefone\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ class="{}input-\/group"{}>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ for="{}telefone\_cadastro"{}>Telefone</label>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type="{}telefone"{}\ id="{}telefone\_cadastro"{}\ name="{}telefone"{}\ required\ placeholder="{}(00)00000-\/0000"{}>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <!-\/-\/\ Grupo\ de\ input:\ Senha\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ class="{}input-\/group"{}>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ for="{}senha\_cadastro"{}>Criar\ uma\ Senha</label>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type="{}password"{}\ id="{}senha\_cadastro"{}\ name="{}senha"{}\ required\ placeholder="{}Mínimo\ 6\ caracteres"{}>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <!-\/-\/\ Grupo\ de\ input:\ Confirmar\ Senha\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ class="{}input-\/group"{}>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ for="{}confirma\_senha"{}>Confirmar\ a\ Senha</label>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type="{}password"{}\ id="{}confirma\_senha"{}\ name="{}confirma\_senha"{}\ required\ placeholder="{}Repita\ a\ senha"{}>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <!-\/-\/\ Botão\ de\ envio\ do\ formulário\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <button\ type="{}submit"{}\ class="{}btn-\/login"{}>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Finalizar\ Cadastro}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </button>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <!-\/-\/\ Link\ para\ quem\ já\ tem\ conta\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <p\ class="{}signup-\/text"{}>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Já\ tem\ uma\ conta?}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <a\ asp-\/controller="{}Home"{}\ asp-\/action="{}Index"{}\ class="{}btn-\/signup"{}>Fazer\ Login</a>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <!-\/-\/\ Redireciona\ para\ a\ página\ de\ login\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </p>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </form>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00087}00087\ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00088}00088\ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00090}00090\ \ \ \ \ <!-\/-\/\ Script\ JavaScript\ para\ validar\ ou\ enviar\ os\ dados\ do\ formulário\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00091}00091\ \ \ \ \ <script\ src="{}\string~/js/cadastro.js"{}></script>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00093}00093\ </body>}
+\DoxyCodeLine{\Hypertarget{_cadastro_8cshtml_source_l00094}00094\ </html>}
+
+\end{DoxyCode}

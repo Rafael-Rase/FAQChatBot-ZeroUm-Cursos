@@ -1,0 +1,373 @@
+\doxysection{styles.\+css}
+\hypertarget{styles_8css_source}{}\label{styles_8css_source}\index{FAQChatBot/wwwroot/css/styles.css@{FAQChatBot/wwwroot/css/styles.css}}
+\mbox{\hyperlink{styles_8css}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00001}00001\ /*\ Estilos\ Gerais\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00002}00002\ *\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00003}00003\ \ \ \ \ margin:\ 0;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00004}00004\ \ \ \ \ padding:\ 0;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00005}00005\ \ \ \ \ box-\/sizing:\ border-\/box;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00006}00006\ \ \ \ \ font-\/family:\ sans-\/serif;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00007}00007\ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00009}00009\ body\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00010}00010\ \ \ \ \ background-\/color:\ \#000000;\ /*\ Fundo\ preto\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00011}00011\ \ \ \ \ color:\ \#ffffff;\ /*\ Letras\ brancas\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00012}00012\ \ \ \ \ display:\ flex;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00013}00013\ \ \ \ \ justify-\/content:\ center;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00014}00014\ \ \ \ \ align-\/items:\ center;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00015}00015\ \ \ \ \ min-\/height:\ 100vh;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00016}00016\ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00018}00018\ /*\ Container\ Principal\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00019}00019\ .container\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00020}00020\ \ \ \ \ display:\ flex;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00021}00021\ \ \ \ \ width:\ 90\%;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00022}00022\ \ \ \ \ max-\/width:\ 1200px;\ /*\ Largura\ máxima\ para\ telas\ grandes\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00023}00023\ \ \ \ \ background-\/color:\ \#111111;\ /*\ Cor\ de\ fundo\ um\ pouco\ mais\ clara\ para\ a\ área\ principal\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00024}00024\ \ \ \ \ border-\/radius:\ 10px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00025}00025\ \ \ \ \ overflow:\ hidden;\ /*\ Garante\ que\ nada\ saia\ do\ container\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00026}00026\ \ \ \ \ box-\/shadow:\ 0\ 0\ 20px\ rgba(0,\ 0,\ 0,\ 0.5);}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00027}00027\ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00029}00029\ /*\ Lado\ Esquerdo:\ Logo\ e\ Frases\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00030}00030\ .logo-\/text-\/area\ \{\ /*\ Mudamos\ de\ 'logo-\/area'\ para\ 'logo-\/text-\/area'\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00031}00031\ \ \ \ \ flex:\ 1;\ /*\ Ocupa\ 50\%\ em\ telas\ grandes\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00032}00032\ \ \ \ \ display:\ flex;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00033}00033\ \ \ \ \ flex-\/direction:\ column;\ /*\ Para\ empilhar\ o\ h1,\ img\ e\ p\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00034}00034\ \ \ \ \ justify-\/content:\ center;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00035}00035\ \ \ \ \ align-\/items:\ center;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00036}00036\ \ \ \ \ background-\/color:\ \#000000;\ /*\ Fundo\ preto\ puro\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00037}00037\ \ \ \ \ padding:\ 40px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00038}00038\ \ \ \ \ text-\/align:\ center;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00039}00039\ \ \ \ \ color:\ \#ffffff;\ /*\ Garante\ que\ o\ texto\ seja\ branco\ nesta\ área\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00040}00040\ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00042}00042\ \ \ \ \ .logo-\/text-\/area\ h1\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00043}00043\ \ \ \ \ \ \ \ \ font-\/size:\ 3em;\ /*\ Tamanho\ maior\ para\ o\ título\ principal\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00044}00044\ \ \ \ \ \ \ \ \ margin-\/bottom:\ 20px;\ /*\ Espaço\ abaixo\ do\ título\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00045}00045\ \ \ \ \ \ \ \ \ font-\/weight:\ bold;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00046}00046\ \ \ \ \ \ \ \ \ color:\ \#ffffff;\ /*\ Cor\ branca\ para\ o\ título\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00047}00047\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00049}00049\ \ \ \ \ .logo-\/text-\/area\ img\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00050}00050\ \ \ \ \ \ \ \ \ max-\/width:\ 160\%;\ /*\ Ajuste\ a\ largura\ máxima\ da\ imagem\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00051}00051\ \ \ \ \ \ \ \ \ height:\ auto;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00052}00052\ \ \ \ \ \ \ \ \ margin-\/bottom:\ 20px;\ /*\ Espaço\ abaixo\ da\ imagem\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00053}00053\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00055}00055\ \ \ \ \ .logo-\/text-\/area\ p\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00056}00056\ \ \ \ \ \ \ \ \ font-\/size:\ 1.3em;\ /*\ Tamanho\ para\ a\ frase\ de\ marketing\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00057}00057\ \ \ \ \ \ \ \ \ line-\/height:\ 1.5;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00058}00058\ \ \ \ \ \ \ \ \ color:\ \#ffffff;\ /*\ Cor\ branca\ para\ a\ frase\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00059}00059\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00062}00062\ /*\ Lado\ Direito:\ Formulário\ de\ Login\ (sem\ alterações\ significativas\ aqui)\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00063}00063\ .login-\/area\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00064}00064\ \ \ \ \ flex:\ 1;\ /*\ Ocupa\ 50\%\ em\ telas\ grandes\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00065}00065\ \ \ \ \ display:\ flex;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00066}00066\ \ \ \ \ justify-\/content:\ center;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00067}00067\ \ \ \ \ align-\/items:\ center;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00068}00068\ \ \ \ \ padding:\ 40px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00069}00069\ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00071}00071\ .login-\/box\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00072}00072\ \ \ \ \ width:\ 100\%;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00073}00073\ \ \ \ \ max-\/width:\ 400px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00074}00074\ \ \ \ \ background-\/color:\ \#1a1a1a;\ /*\ Fundo\ mais\ escuro\ para\ a\ caixa\ de\ login\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00075}00075\ \ \ \ \ padding:\ 30px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00076}00076\ \ \ \ \ border-\/radius:\ 10px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00077}00077\ \ \ \ \ box-\/shadow:\ 0\ 0\ 15px\ rgba(0,\ 0,\ 0,\ 0.7);}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00078}00078\ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00080}00080\ \ \ \ \ .login-\/box\ h2\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00081}00081\ \ \ \ \ \ \ \ \ margin-\/bottom:\ 25px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00082}00082\ \ \ \ \ \ \ \ \ font-\/size:\ 24px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00083}00083\ \ \ \ \ \ \ \ \ color:\ \#9c45e8;\ /*\ Cor\ roxa\ para\ o\ título\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00084}00084\ \ \ \ \ \ \ \ \ text-\/align:\ center;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00085}00085\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00087}00087\ /*\ Grupos\ de\ Input\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00088}00088\ .input-\/group\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00089}00089\ \ \ \ \ margin-\/bottom:\ 20px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00090}00090\ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00092}00092\ \ \ \ \ .input-\/group\ label\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00093}00093\ \ \ \ \ \ \ \ \ display:\ block;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00094}00094\ \ \ \ \ \ \ \ \ margin-\/bottom:\ 8px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00095}00095\ \ \ \ \ \ \ \ \ font-\/weight:\ bold;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00096}00096\ \ \ \ \ \ \ \ \ font-\/size:\ 14px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00097}00097\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00099}00099\ \ \ \ \ .input-\/group\ input\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00100}00100\ \ \ \ \ \ \ \ \ width:\ 100\%;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00101}00101\ \ \ \ \ \ \ \ \ padding:\ 12px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00102}00102\ \ \ \ \ \ \ \ \ border:\ none;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00103}00103\ \ \ \ \ \ \ \ \ border-\/radius:\ 5px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00104}00104\ \ \ \ \ \ \ \ \ background-\/color:\ \#2a2a2a;\ /*\ Fundo\ escuro\ para\ o\ input\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00105}00105\ \ \ \ \ \ \ \ \ color:\ \#ffffff;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00106}00106\ \ \ \ \ \ \ \ \ font-\/size:\ 16px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00107}00107\ \ \ \ \ \ \ \ \ transition:\ border-\/color\ 0.3s;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00108}00108\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00110}00110\ \ \ \ \ \ \ \ \ .input-\/group\ input:focus\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ outline:\ none;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ border-\/color:\ \#9c45e8;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00113}00113\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00115}00115\ /*\ -\/-\/-\/\ ESTILO\ PARA\ O\ LINK\ "{}ESQUECEU\ A\ SENHA"{}\ -\/-\/-\/\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00117}00117\ .forgot-\/password-\/link\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00118}00118\ \ \ \ \ display:\ block;\ /*\ Garante\ que\ o\ link\ ocupe\ sua\ própria\ linha\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00119}00119\ \ \ \ \ text-\/align:\ right;\ /*\ Alinha\ o\ link\ à\ direita\ do\ formulário\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00120}00120\ \ \ \ \ font-\/size:\ 0.9em;\ /*\ Tamanho\ da\ fonte\ um\ pouco\ menor\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00121}00121\ \ \ \ \ margin-\/top:\ 10px;\ /*\ Espaço\ acima\ do\ link\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00122}00122\ \ \ \ \ margin-\/bottom:\ 20px;\ /*\ Espaço\ abaixo\ do\ link,\ antes\ do\ botão\ de\ login\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00123}00123\ \ \ \ \ /*\ Estilo\ padrão:\ discreto\ e\ legível\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00124}00124\ \ \ \ \ color:\ \#aaaaaa;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00125}00125\ \ \ \ \ text-\/decoration:\ none;\ /*\ Remove\ o\ sublinhado\ padrão\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00127}00127\ \ \ \ \ transition:\ color\ 0.3s\ ease;\ /*\ Transição\ suave\ para\ o\ efeito\ hover\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00128}00128\ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00130}00130\ \ \ \ \ .forgot-\/password-\/link:hover\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00131}00131\ \ \ \ \ \ \ \ \ color:\ \#9c45e8;\ /*\ Cor\ roxa\ vibrante\ (sua\ cor\ principal)\ ao\ passar\ o\ mouse\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00132}00132\ \ \ \ \ \ \ \ \ text-\/decoration:\ underline;\ /*\ Adiciona\ sublinhado\ no\ hover\ para\ indicar\ que\ é\ clicável\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00133}00133\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00137}00137\ /*\ Botões\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00138}00138\ .btn-\/login\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00139}00139\ \ \ \ \ width:\ 100\%;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00140}00140\ \ \ \ \ padding:\ 12px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00141}00141\ \ \ \ \ background-\/color:\ \#9c45e8;\ /*\ Cor\ roxa\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00142}00142\ \ \ \ \ color:\ \#ffffff;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00143}00143\ \ \ \ \ border:\ none;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00144}00144\ \ \ \ \ border-\/radius:\ 5px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00145}00145\ \ \ \ \ cursor:\ pointer;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00146}00146\ \ \ \ \ font-\/size:\ 16px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00147}00147\ \ \ \ \ font-\/weight:\ bold;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00148}00148\ \ \ \ \ transition:\ background-\/color\ 0.3s;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00149}00149\ \ \ \ \ margin-\/bottom:\ 15px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00150}00150\ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00152}00152\ \ \ \ \ .btn-\/login:hover\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00153}00153\ \ \ \ \ \ \ \ \ background-\/color:\ \#b05cff;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00154}00154\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00155}00155\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00156}00156\ .signup-\/text\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00157}00157\ \ \ \ \ text-\/align:\ center;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00158}00158\ \ \ \ \ font-\/size:\ 14px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00159}00159\ \ \ \ \ color:\ \#ffffff;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00160}00160\ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00161}00161\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00162}00162\ .btn-\/signup\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00163}00163\ \ \ \ \ color:\ \#9c45e8;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00164}00164\ \ \ \ \ text-\/decoration:\ none;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00165}00165\ \ \ \ \ font-\/weight:\ bold;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00166}00166\ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00167}00167\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00168}00168\ \ \ \ \ .btn-\/signup:hover\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00169}00169\ \ \ \ \ \ \ \ \ text-\/decoration:\ underline;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00170}00170\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00171}00171\ /*\ -\/-\/-\/\ ESTILOS\ DE\ RESPONSIVIDADE\ PARA\ TELAS\ MENORES\ (CELULAR)\ -\/-\/-\/\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00172}00172\ @media\ (max-\/width:\ 768px)\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00173}00173\ \ \ \ \ /*\ *\ NOVO\ BLOCO\ PARA\ LOGIN/CADASTRO\ (index.cshtml)\ *}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00174}00174\ \ \ \ \ Empilha\ as\ áreas\ de\ logo\ e\ login\ no\ mobile\ e\ garante\ que\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00175}00175\ \ \ \ \ a\ logo-\/text-\/area\ não\ ocupe\ 50\%\ da\ altura\ da\ tela,\ mas\ sim\ o\ necessário.}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00176}00176\ \ \ \ \ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00177}00177\ \ \ \ \ .container\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00178}00178\ \ \ \ \ \ \ \ \ flex-\/direction:\ column;\ /*\ Faz\ com\ que\ logo-\/text-\/area\ e\ login-\/area\ fiquem\ empilhados\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00179}00179\ \ \ \ \ \ \ \ \ width:\ 100\%;\ /*\ Ocupa\ a\ largura\ total\ da\ tela\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00180}00180\ \ \ \ \ \ \ \ \ border-\/radius:\ 0;\ /*\ Remove\ o\ border-\/radius\ no\ mobile\ para\ visualização\ full\ screen\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00181}00181\ \ \ \ \ \ \ \ \ box-\/shadow:\ none;\ /*\ Remove\ a\ sombra\ no\ mobile\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00182}00182\ \ \ \ \ \ \ \ \ min-\/height:\ 100vh;\ /*\ Garante\ que\ a\ caixa\ de\ login\ esteja\ visível\ se\ o\ conteúdo\ for\ maior\ que\ a\ tela\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00183}00183\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00185}00185\ \ \ \ \ .logo-\/text-\/area\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00186}00186\ \ \ \ \ \ \ \ \ flex:\ none;\ /*\ Remove\ o\ flex:\ 1\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00187}00187\ \ \ \ \ \ \ \ \ padding:\ 30px\ 20px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00188}00188\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00189}00189\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00190}00190\ \ \ \ \ .login-\/area\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00191}00191\ \ \ \ \ \ \ \ \ flex:\ none;\ /*\ Remove\ o\ flex:\ 1\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00192}00192\ \ \ \ \ \ \ \ \ padding:\ 20px;\ /*\ Ajusta\ o\ padding\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00193}00193\ \ \ \ \ \ \ \ \ width:\ 100\%;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00194}00194\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00195}00195\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00196}00196\ \ \ \ \ /*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00197}00197\ \ \ \ \ /*\ *\ ESTILOS\ DO\ DASHBOARD\ (dashboard.cshtml)\ -\/\ Mantenha\ os\ seus\ existentes\ *\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00198}00198\ \ \ \ \ .dashboard-\/container\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00199}00199\ \ \ \ \ \ \ \ \ flex-\/direction:\ column;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00200}00200\ \ \ \ \ \ \ \ \ overflow-\/x:\ hidden;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00201}00201\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00202}00202\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00203}00203\ \ \ \ \ /*\ 1.\ ESTILO\ DO\ BOTÃO\ HAMBURGUER\ (NOVO)\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00204}00204\ \ \ \ \ \#menu-\/toggle\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00205}00205\ \ \ \ \ \ \ \ \ display:\ block;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00206}00206\ \ \ \ \ \ \ \ \ /*\ ...\ outros\ estilos\ ...\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00207}00207\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00208}00208\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00209}00209\ \ \ \ \ /*\ 2.\ COMPORTAMENTO\ DA\ SIDEBAR\ (AGORA\ UM\ PAINEL\ LATERAL)\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00210}00210\ \ \ \ \ .sidebar\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00211}00211\ \ \ \ \ \ \ \ \ /*\ ...\ outros\ estilos\ ...\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00212}00212\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00213}00213\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00214}00214\ \ \ \ \ /*\ 3.\ CONTEÚDO\ PRINCIPAL\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00215}00215\ \ \ \ \ .main-\/content\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00216}00216\ \ \ \ \ \ \ \ \ padding:\ 50px\ 20px\ 20px\ 20px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00217}00217\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00218}00218\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00219}00219\ \ \ \ \ .dashboard-\/content\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00220}00220\ \ \ \ \ \ \ \ \ width:\ 100\%;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00221}00221\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00222}00222\ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00223}00223\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00224}00224\ .faq-\/section\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00225}00225\ \ \ \ \ background-\/color:\ \#1a1a1a;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00226}00226\ \ \ \ \ padding:\ 30px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00227}00227\ \ \ \ \ border-\/radius:\ 10px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00228}00228\ \ \ \ \ margin-\/top:\ 30px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00229}00229\ \ \ \ \ color:\ \#fff;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00230}00230\ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00231}00231\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00232}00232\ .faq-\/question\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00233}00233\ \ \ \ \ width:\ 100\%;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00234}00234\ \ \ \ \ background:\ none;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00235}00235\ \ \ \ \ border:\ none;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00236}00236\ \ \ \ \ color:\ \#9c45e8;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00237}00237\ \ \ \ \ font-\/size:\ 1.1em;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00238}00238\ \ \ \ \ text-\/align:\ left;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00239}00239\ \ \ \ \ padding:\ 10px\ 0;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00240}00240\ \ \ \ \ cursor:\ pointer;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00241}00241\ \ \ \ \ border-\/bottom:\ 1px\ solid\ \#333;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00242}00242\ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00243}00243\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00244}00244\ \ \ \ \ .faq-\/question:hover\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00245}00245\ \ \ \ \ \ \ \ \ color:\ \#fff;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00246}00246\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00247}00247\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00248}00248\ .faq-\/answer\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00249}00249\ \ \ \ \ display:\ none;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00250}00250\ \ \ \ \ padding:\ 10px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00251}00251\ \ \ \ \ color:\ \#ccc;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00252}00252\ \ \ \ \ border-\/left:\ 3px\ solid\ \#9c45e8;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00253}00253\ \ \ \ \ margin-\/bottom:\ 10px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00254}00254\ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00255}00255\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00256}00256\ /*\ =====\ MODAL\ FAQ\ =====\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00257}00257\ .faq-\/modal\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00258}00258\ \ \ \ \ display:\ none;\ /*\ Inicialmente\ escondido\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00259}00259\ \ \ \ \ position:\ fixed;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00260}00260\ \ \ \ \ z-\/index:\ 1000;\ /*\ Fica\ sobre\ tudo\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00261}00261\ \ \ \ \ left:\ 0;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00262}00262\ \ \ \ \ top:\ 0;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00263}00263\ \ \ \ \ width:\ 100\%;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00264}00264\ \ \ \ \ height:\ 100\%;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00265}00265\ \ \ \ \ background-\/color:\ rgba(0,0,0,0.7);\ /*\ Fundo\ escuro\ transparente\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00266}00266\ \ \ \ \ justify-\/content:\ center;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00267}00267\ \ \ \ \ align-\/items:\ center;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00268}00268\ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00269}00269\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00270}00270\ /*\ Caixa\ do\ conteúdo\ do\ modal\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00271}00271\ .faq-\/content\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00272}00272\ \ \ \ \ background-\/color:\ \#1a1a1a;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00273}00273\ \ \ \ \ padding:\ 25px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00274}00274\ \ \ \ \ border-\/radius:\ 10px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00275}00275\ \ \ \ \ width:\ 550px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00276}00276\ \ \ \ \ max-\/height:\ 80vh;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00277}00277\ \ \ \ \ overflow-\/y:\ auto;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00278}00278\ \ \ \ \ box-\/shadow:\ 0\ 5px\ 15px\ rgba(0,0,0,0.6);}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00279}00279\ \ \ \ \ animation:\ fadeIn\ 0.3s\ ease-\/in-\/out;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00280}00280\ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00281}00281\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00282}00282\ /*\ Animação\ de\ entrada\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00283}00283\ @keyframes\ fadeIn\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00284}00284\ \ \ \ \ from\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00285}00285\ \ \ \ \ \ \ \ \ opacity:\ 0;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00286}00286\ \ \ \ \ \ \ \ \ transform:\ scale(0.95);}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00287}00287\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00288}00288\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00289}00289\ \ \ \ \ to\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00290}00290\ \ \ \ \ \ \ \ \ opacity:\ 1;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00291}00291\ \ \ \ \ \ \ \ \ transform:\ scale(1);}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00292}00292\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00293}00293\ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00294}00294\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00295}00295\ /*\ Botão\ de\ fechar\ (X)\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00296}00296\ .close-\/faq\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00297}00297\ \ \ \ \ color:\ \#fff;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00298}00298\ \ \ \ \ float:\ right;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00299}00299\ \ \ \ \ font-\/size:\ 26px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00300}00300\ \ \ \ \ font-\/weight:\ bold;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00301}00301\ \ \ \ \ cursor:\ pointer;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00302}00302\ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00303}00303\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00304}00304\ \ \ \ \ .close-\/faq:hover\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00305}00305\ \ \ \ \ \ \ \ \ color:\ \#9c45e8;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00306}00306\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00307}00307\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00308}00308\ /*\ Estilo\ das\ perguntas\ do\ FAQ\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00309}00309\ .faq-\/item\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00310}00310\ \ \ \ \ margin-\/bottom:\ 12px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00311}00311\ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00312}00312\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00313}00313\ .faq-\/question\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00314}00314\ \ \ \ \ width:\ 100\%;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00315}00315\ \ \ \ \ text-\/align:\ left;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00316}00316\ \ \ \ \ background:\ \#222;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00317}00317\ \ \ \ \ color:\ \#9c45e8;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00318}00318\ \ \ \ \ border:\ none;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00319}00319\ \ \ \ \ padding:\ 10px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00320}00320\ \ \ \ \ border-\/radius:\ 5px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00321}00321\ \ \ \ \ font-\/weight:\ bold;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00322}00322\ \ \ \ \ cursor:\ pointer;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00323}00323\ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00324}00324\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00325}00325\ \ \ \ \ .faq-\/question:hover\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00326}00326\ \ \ \ \ \ \ \ \ background:\ \#2e2e2e;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00327}00327\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00328}00328\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00329}00329\ .faq-\/answer\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00330}00330\ \ \ \ \ display:\ none;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00331}00331\ \ \ \ \ color:\ \#ccc;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00332}00332\ \ \ \ \ padding:\ 10px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00333}00333\ \ \ \ \ background:\ \#111;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00334}00334\ \ \ \ \ border-\/radius:\ 5px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00335}00335\ \ \ \ \ margin-\/top:\ 5px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00336}00336\ \ \ \ \ line-\/height:\ 1.4;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00337}00337\ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00338}00338\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00339}00339\ \#libras-\/icon\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00340}00340\ \ \ \ \ /*\ Posicionamento\ Fixo\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00341}00341\ \ \ \ \ position:\ fixed;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00342}00342\ \ \ \ \ bottom:\ 20px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00343}00343\ \ \ \ \ right:\ 100px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00344}00344\ \ \ \ \ /*\ Estilização\ */}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00345}00345\ \ \ \ \ width:\ 60px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00346}00346\ \ \ \ \ height:\ 60px;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00347}00347\ \ \ \ \ background-\/color:\ \#333333;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00348}00348\ \ \ \ \ border-\/radius:\ 50\%;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00349}00349\ \ \ \ \ display:\ flex;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00350}00350\ \ \ \ \ justify-\/content:\ center;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00351}00351\ \ \ \ \ align-\/items:\ center;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00352}00352\ \ \ \ \ cursor:\ pointer;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00353}00353\ \ \ \ \ box-\/shadow:\ 0\ 4px\ 10px\ rgba(0,\ 0,\ 0,\ 0.4);}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00354}00354\ \ \ \ \ transition:\ background-\/color\ 0.3s,\ transform\ 0.3s;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00355}00355\ \ \ \ \ z-\/index:\ 900;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00356}00356\ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00357}00357\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00358}00358\ \ \ \ \ \#libras-\/icon\ img\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00359}00359\ \ \ \ \ \ \ \ \ width:\ 65\%;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00360}00360\ \ \ \ \ \ \ \ \ height:\ 65\%;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00361}00361\ \ \ \ \ \ \ \ \ object-\/fit:\ contain;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00362}00362\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00363}00363\ }
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00364}00364\ \ \ \ \ \#libras-\/icon:hover\ \{}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00365}00365\ \ \ \ \ \ \ \ \ background-\/color:\ \#9c45e8;}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00366}00366\ \ \ \ \ \ \ \ \ transform:\ scale(1.05);}
+\DoxyCodeLine{\Hypertarget{styles_8css_source_l00367}00367\ \ \ \ \ \}}
+
+\end{DoxyCode}

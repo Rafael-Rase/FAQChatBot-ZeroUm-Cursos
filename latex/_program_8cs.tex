@@ -1,0 +1,168 @@
+\doxysection{FAQChat\+Bot/\+Program.cs File Reference}
+\hypertarget{_program_8cs}{}\label{_program_8cs}\index{FAQChatBot/Program.cs@{FAQChatBot/Program.cs}}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{_program_8cs_a6664f596a178b8d68fddd8a8e79a57ce}{scope}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+builder.\+Web\+Host. \mbox{\hyperlink{_program_8cs_a47c35286113561a422a4d59e326a0864}{Use\+Urls}} ("{}https\+://localhost\+:7260"{}, "{}http\+://0.\+0.\+0.\+0\+:7260"{})
+\item 
+builder.\+Services. \mbox{\hyperlink{_program_8cs_af8107f2f8ff8e8de22a684c8c8ad3e99}{Add\+Controllers\+With\+Views}} ()
+\item 
+builder.\+Services. \mbox{\hyperlink{_program_8cs_a176f0e64b6b073dfa480817e2803ad4d}{Add\+Db\+Context$<$ App\+Db\+Context $>$}} (options=$>$ options.\+Use\+Sql\+Server(builder.\+Configuration.\+Get\+Connection\+String("{}Conexao\+BD"{})))
+\item 
+builder.\+Services. \mbox{\hyperlink{_program_8cs_a32d7bc2afdb2ab1b8cd24332feeb0aec}{Add\+Http\+Client}} ()
+\item 
+builder.\+Services. \mbox{\hyperlink{_program_8cs_aff388c27af0c0d0b452c115c1dde1e9e}{Add\+Scoped$<$ IChat\+Service, Gemini\+Chat\+Service $>$}} ()
+\item 
+app. \mbox{\hyperlink{_program_8cs_a94c810d266751293a2d511a720a5625f}{Use\+Routing}} ()
+\item 
+app. \mbox{\hyperlink{_program_8cs_af6f72d752b2e73aa0292f74bd13237ab}{Use\+Authorization}} ()
+\item 
+app. \mbox{\hyperlink{_program_8cs_aec500e125fbbfcd3d99a23db7de60be7}{Map\+Controller\+Route}} (name\+:"{}default"{}, pattern\+:"{}\{controller=Home\}/\{action=Index\}/\{id?\}"{})
+\item 
+app. \mbox{\hyperlink{_program_8cs_aaa3dbf02e269c3ef7e8546d290c6b3dd}{Run}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+var \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}} = Web\+Application.\+Create\+Builder(args)
+\item 
+var \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} = builder.\+Build()
+\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\Hypertarget{_program_8cs_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{_program_8cs_a6664f596a178b8d68fddd8a8e79a57ce}\index{Program.cs@{Program.cs}!scope@{scope}}
+\index{scope@{scope}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{scope}{scope}}
+{\footnotesize\ttfamily \label{_program_8cs_a6664f596a178b8d68fddd8a8e79a57ce} 
+using \mbox{\hyperlink{_program_8cs_a6664f596a178b8d68fddd8a8e79a57ce}{scope}}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.Services.CreateScope())}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ var\ db\ =\ \mbox{\hyperlink{_program_8cs_a6664f596a178b8d68fddd8a8e79a57ce}{scope}}.ServiceProvider.GetRequiredService<\mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_app_db_context}{AppDbContext}}>();}
+\DoxyCodeLine{\ \ \ \ db.Database.Migrate();\ }
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.Environment.IsDevelopment())}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.UseExceptionHandler(\textcolor{stringliteral}{"{}/Home/Error"{}});}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.UseHsts();}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.UseStaticFiles()}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{_program_8cs_source_l00022}{22}} of file \mbox{\hyperlink{_program_8cs_source}{Program.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ var\ db\ =\ \mbox{\hyperlink{_program_8cs_a6664f596a178b8d68fddd8a8e79a57ce}{scope}}.ServiceProvider.GetRequiredService<\mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_app_db_context}{AppDbContext}}>();}
+\DoxyCodeLine{00025\ \ \ \ \ db.Database.Migrate();\ \textcolor{comment}{//\ cria\ ou\ atualiza\ o\ banco\ automaticamente}}
+\DoxyCodeLine{00026\ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ Pipeline\ de\ middleware}}
+\DoxyCodeLine{00029\ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.Environment.IsDevelopment())}
+\DoxyCodeLine{00030\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.UseExceptionHandler(\textcolor{stringliteral}{"{}/Home/Error"{}});}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.UseHsts();}
+\DoxyCodeLine{00033\ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{_program_8cs_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_program_8cs_af8107f2f8ff8e8de22a684c8c8ad3e99}\index{Program.cs@{Program.cs}!AddControllersWithViews@{AddControllersWithViews}}
+\index{AddControllersWithViews@{AddControllersWithViews}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{AddControllersWithViews()}{AddControllersWithViews()}}
+{\footnotesize\ttfamily \label{_program_8cs_af8107f2f8ff8e8de22a684c8c8ad3e99} 
+builder.\+Services. Add\+Controllers\+With\+Views (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_a176f0e64b6b073dfa480817e2803ad4d}\index{Program.cs@{Program.cs}!AddDbContext$<$ AppDbContext $>$@{AddDbContext$<$ AppDbContext $>$}}
+\index{AddDbContext$<$ AppDbContext $>$@{AddDbContext$<$ AppDbContext $>$}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{AddDbContext$<$ AppDbContext $>$()}{AddDbContext< AppDbContext >()}}
+{\footnotesize\ttfamily \label{_program_8cs_a176f0e64b6b073dfa480817e2803ad4d} 
+builder.\+Services. Add\+Db\+Context$<$ \mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_app_db_context}{App\+Db\+Context}} $>$ (\begin{DoxyParamCaption}\item[{options}]{}{, }\item[{options.}]{Use\+Sql\+Server}{builder.\+Configuration.\+Get\+Connection\+String("{}\+Conexao\+BD"{})}\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_a32d7bc2afdb2ab1b8cd24332feeb0aec}\index{Program.cs@{Program.cs}!AddHttpClient@{AddHttpClient}}
+\index{AddHttpClient@{AddHttpClient}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{AddHttpClient()}{AddHttpClient()}}
+{\footnotesize\ttfamily \label{_program_8cs_a32d7bc2afdb2ab1b8cd24332feeb0aec} 
+builder.\+Services. Add\+Http\+Client (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_aff388c27af0c0d0b452c115c1dde1e9e}\index{Program.cs@{Program.cs}!AddScoped$<$ IChatService, GeminiChatService $>$@{AddScoped$<$ IChatService, GeminiChatService $>$}}
+\index{AddScoped$<$ IChatService, GeminiChatService $>$@{AddScoped$<$ IChatService, GeminiChatService $>$}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{AddScoped$<$ IChatService, GeminiChatService $>$()}{AddScoped< IChatService, GeminiChatService >()}}
+{\footnotesize\ttfamily \label{_program_8cs_aff388c27af0c0d0b452c115c1dde1e9e} 
+builder.\+Services. Add\+Scoped$<$ \mbox{\hyperlink{interface_f_a_q_chat_bot_1_1_services_1_1_i_chat_service}{IChat\+Service}}, \mbox{\hyperlink{class_f_a_q_chat_bot_1_1_services_1_1_gemini_chat_service}{Gemini\+Chat\+Service}} $>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_aec500e125fbbfcd3d99a23db7de60be7}\index{Program.cs@{Program.cs}!MapControllerRoute@{MapControllerRoute}}
+\index{MapControllerRoute@{MapControllerRoute}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{MapControllerRoute()}{MapControllerRoute()}}
+{\footnotesize\ttfamily \label{_program_8cs_aec500e125fbbfcd3d99a23db7de60be7} 
+app. Map\+Controller\+Route (\begin{DoxyParamCaption}\item[{name\+:"{}default"{}}]{}{, }\item[{pattern\+:"{}\{controller=Home\}/\{action=Index\}/\{id?\}"{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_aaa3dbf02e269c3ef7e8546d290c6b3dd}\index{Program.cs@{Program.cs}!Run@{Run}}
+\index{Run@{Run}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily \label{_program_8cs_aaa3dbf02e269c3ef7e8546d290c6b3dd} 
+app. Run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_af6f72d752b2e73aa0292f74bd13237ab}\index{Program.cs@{Program.cs}!UseAuthorization@{UseAuthorization}}
+\index{UseAuthorization@{UseAuthorization}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{UseAuthorization()}{UseAuthorization()}}
+{\footnotesize\ttfamily \label{_program_8cs_af6f72d752b2e73aa0292f74bd13237ab} 
+app. Use\+Authorization (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_a94c810d266751293a2d511a720a5625f}\index{Program.cs@{Program.cs}!UseRouting@{UseRouting}}
+\index{UseRouting@{UseRouting}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{UseRouting()}{UseRouting()}}
+{\footnotesize\ttfamily \label{_program_8cs_a94c810d266751293a2d511a720a5625f} 
+app. Use\+Routing (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_a47c35286113561a422a4d59e326a0864}\index{Program.cs@{Program.cs}!UseUrls@{UseUrls}}
+\index{UseUrls@{UseUrls}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{UseUrls()}{UseUrls()}}
+{\footnotesize\ttfamily \label{_program_8cs_a47c35286113561a422a4d59e326a0864} 
+builder.\+Web\+Host. Use\+Urls (\begin{DoxyParamCaption}\item[{"{}https\+://localhost\+:7260"{}}]{}{, }\item[{"{}http\+://0.\+0.\+0.\+0\+:7260"{}}]{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\Hypertarget{_program_8cs_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}\index{Program.cs@{Program.cs}!app@{app}}
+\index{app@{app}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{app}{app}}
+{\footnotesize\ttfamily \label{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d} 
+var app = builder.\+Build()}
+
+
+
+Definition at line \mbox{\hyperlink{_program_8cs_source_l00019}{19}} of file \mbox{\hyperlink{_program_8cs_source}{Program.\+cs}}.
+
+\Hypertarget{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}\index{Program.cs@{Program.cs}!builder@{builder}}
+\index{builder@{builder}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{builder}{builder}}
+{\footnotesize\ttfamily \label{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5} 
+var builder = Web\+Application.\+Create\+Builder(args)}
+
+
+
+Definition at line \mbox{\hyperlink{_program_8cs_source_l00005}{5}} of file \mbox{\hyperlink{_program_8cs_source}{Program.\+cs}}.
+

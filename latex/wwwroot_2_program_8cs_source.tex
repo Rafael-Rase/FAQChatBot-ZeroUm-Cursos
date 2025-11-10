@@ -1,0 +1,38 @@
+\doxysection{Program.\+cs}
+\hypertarget{wwwroot_2_program_8cs_source}{}\label{wwwroot_2_program_8cs_source}\index{FAQChatBot/wwwroot/Program.cs@{FAQChatBot/wwwroot/Program.cs}}
+\mbox{\hyperlink{wwwroot_2_program_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }Banco\_de\_Dados.Models;}
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }Microsoft.EntityFrameworkCore;}
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00004}\mbox{\hyperlink{wwwroot_2_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{00004}}\ var\ \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}\ =\ WebApplication.CreateBuilder(args);}
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00006}00006\ \textcolor{comment}{//\ Adicionar\ serviços\ MVC}}
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00007}\mbox{\hyperlink{wwwroot_2_program_8cs_af8107f2f8ff8e8de22a684c8c8ad3e99}{00007}}\ \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.Services.AddControllersWithViews();}
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00009}00009\ \textcolor{comment}{//\ Registrar\ DbContext}}
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00010}\mbox{\hyperlink{wwwroot_2_program_8cs_a176f0e64b6b073dfa480817e2803ad4d}{00010}}\ \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.Services.AddDbContext<AppDbContext>(options\ =>}
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00011}00011\ options.UseSqlServer(\mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.Configuration.GetConnectionString(\textcolor{stringliteral}{"{}ConexaoBD"{}})));}
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00013}\mbox{\hyperlink{wwwroot_2_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{00013}}\ var\ \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}\ =\ \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.Build();}
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00015}00015\ \textcolor{comment}{//\ Configuração\ do\ pipeline\ de\ requisições}}
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00016}\mbox{\hyperlink{wwwroot_2_program_8cs_af2d0c02efe3fbc2d94e5b6e316777c4d}{00016}}\ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.Environment.IsDevelopment())}
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00017}00017\ \{}
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00018}00018\ \ \ \ \ \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.UseExceptionHandler(\textcolor{stringliteral}{"{}/Home/Error"{}});}
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00019}00019\ \ \ \ \ \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.UseHsts();}
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00020}00020\ \}}
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00022}\mbox{\hyperlink{wwwroot_2_program_8cs_aa4d447fc3129a3aa301d736b8bd04ae9}{00022}}\ \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.UseHttpsRedirection();}
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00023}\mbox{\hyperlink{wwwroot_2_program_8cs_a906a3ce545279a7a73941f1d7b64d7cf}{00023}}\ \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.UseStaticFiles();}
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00024}\mbox{\hyperlink{wwwroot_2_program_8cs_a94c810d266751293a2d511a720a5625f}{00024}}\ \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.UseRouting();}
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00025}\mbox{\hyperlink{wwwroot_2_program_8cs_af6f72d752b2e73aa0292f74bd13237ab}{00025}}\ \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.UseAuthorization();}
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00027}00027\ \textcolor{comment}{//\ Definição\ da\ rota\ padrão}}
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00028}\mbox{\hyperlink{wwwroot_2_program_8cs_aec500e125fbbfcd3d99a23db7de60be7}{00028}}\ \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.MapControllerRoute(}
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00029}00029\ \ \ \ \ name:\ \textcolor{stringliteral}{"{}default"{}},}
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00030}00030\ \ \ \ \ pattern:\ \textcolor{stringliteral}{"{}\{controller=Home\}/\{action=Index\}/\{id?\}"{}});}
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{wwwroot_2_program_8cs_source_l00032}\mbox{\hyperlink{wwwroot_2_program_8cs_aaa3dbf02e269c3ef7e8546d290c6b3dd}{00032}}\ \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.Run();}
+
+\end{DoxyCode}

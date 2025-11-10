@@ -1,0 +1,226 @@
+\doxysection{Home\+Controller Class Reference}
+\hypertarget{class_home_controller}{}\label{class_home_controller}\index{HomeController@{HomeController}}
+Inheritance diagram for Home\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_home_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_home_controller_a5d6bb77b0101d955c3422ac60e1b50df}{Home\+Controller}} (\mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_app_db_context}{App\+Db\+Context}} context)
+\item 
+IAction\+Result \mbox{\hyperlink{class_home_controller_a7d8c75f70ce2e10e4c850b125aba2c00}{Index}} ()
+\item 
+IAction\+Result \mbox{\hyperlink{class_home_controller_a0ad6d4431a7729ac62fb5a1fd04e90a2}{Recuperar\+Senha}} ()
+\item 
+IAction\+Result \mbox{\hyperlink{class_home_controller_ab2ce812cd996a5715583ca70182bdc43}{Dashboard}} ()
+\item 
+IAction\+Result \mbox{\hyperlink{class_home_controller_ad11a650ff0b97a90ce720a1159436dac}{Faq}} ()
+\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_home_controller_a958884072d8c5f70689734181f3b9e64}{Cadastro}} (\mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_aluno}{Aluno}} novo\+Aluno)
+\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_home_controller_afef8d1b46d189bed02fce1f03a529472}{Login}} (string email, string senha)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_home_controller_8cs_source_l00006}{6}} of file \mbox{\hyperlink{_home_controller_8cs_source}{Home\+Controller.\+cs}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_home_controller_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_home_controller_a5d6bb77b0101d955c3422ac60e1b50df}\index{HomeController@{HomeController}!HomeController@{HomeController}}
+\index{HomeController@{HomeController}!HomeController@{HomeController}}
+\doxysubsubsection{\texorpdfstring{HomeController()}{HomeController()}}
+{\footnotesize\ttfamily \label{class_home_controller_a5d6bb77b0101d955c3422ac60e1b50df} 
+Home\+Controller.\+Home\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_app_db_context}{App\+Db\+Context}}}]{context}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_home_controller_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_home_controller_8cs_source}{Home\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \_context\ =\ context;}
+\DoxyCodeLine{00014\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_home_controller_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_home_controller_a958884072d8c5f70689734181f3b9e64}\index{HomeController@{HomeController}!Cadastro@{Cadastro}}
+\index{Cadastro@{Cadastro}!HomeController@{HomeController}}
+\doxysubsubsection{\texorpdfstring{Cadastro()}{Cadastro()}}
+{\footnotesize\ttfamily \label{class_home_controller_a958884072d8c5f70689734181f3b9e64} 
+async Task$<$ IAction\+Result $>$ Home\+Controller.\+Cadastro (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_aluno}{Aluno}}}]{novo\+Aluno}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_home_controller_8cs_source_l00042}{42}} of file \mbox{\hyperlink{_home_controller_8cs_source}{Home\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043\ \ \ \ \ \{}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ModelState.IsValid)}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrEmpty(novoAluno.\mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_aluno_a4c420544e72ff65adb270a651b55c50a}{Senha}}))}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ModelState.AddModelError(\textcolor{stringliteral}{"{}Senha"{}},\ \textcolor{stringliteral}{"{}A\ senha\ é obrigatória."{}});}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View(novoAluno);}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ novoAluno.Senha\ =\ BCrypt.Net.BCrypt.HashPassword(novoAluno.\mbox{\hyperlink{class_f_a_q_chat_bot_1_1_models_1_1_aluno_a4c420544e72ff65adb270a651b55c50a}{Senha}});}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ novoAluno.DataCadastro\ =\ DateTime.Now;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \_context.Alunos.Add(novoAluno);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_context.SaveChangesAsync();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ RedirectToAction(\textcolor{stringliteral}{"{}Index"{}});}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View(novoAluno);}
+\DoxyCodeLine{00070\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_home_controller_ab2ce812cd996a5715583ca70182bdc43}\index{HomeController@{HomeController}!Dashboard@{Dashboard}}
+\index{Dashboard@{Dashboard}!HomeController@{HomeController}}
+\doxysubsubsection{\texorpdfstring{Dashboard()}{Dashboard()}}
+{\footnotesize\ttfamily \label{class_home_controller_ab2ce812cd996a5715583ca70182bdc43} 
+IAction\+Result Home\+Controller.\+Dashboard (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_home_controller_8cs_source_l00029}{29}} of file \mbox{\hyperlink{_home_controller_8cs_source}{Home\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \ \ \ \ \{}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_home_controller_ad11a650ff0b97a90ce720a1159436dac}\index{HomeController@{HomeController}!Faq@{Faq}}
+\index{Faq@{Faq}!HomeController@{HomeController}}
+\doxysubsubsection{\texorpdfstring{Faq()}{Faq()}}
+{\footnotesize\ttfamily \label{class_home_controller_ad11a650ff0b97a90ce720a1159436dac} 
+IAction\+Result Home\+Controller.\+Faq (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_home_controller_8cs_source_l00036}{36}} of file \mbox{\hyperlink{_home_controller_8cs_source}{Home\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View();}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_home_controller_a7d8c75f70ce2e10e4c850b125aba2c00}\index{HomeController@{HomeController}!Index@{Index}}
+\index{Index@{Index}!HomeController@{HomeController}}
+\doxysubsubsection{\texorpdfstring{Index()}{Index()}}
+{\footnotesize\ttfamily \label{class_home_controller_a7d8c75f70ce2e10e4c850b125aba2c00} 
+IAction\+Result Home\+Controller.\+Index (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_home_controller_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_home_controller_8cs_source}{Home\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View();}
+\DoxyCodeLine{00021\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_home_controller_afef8d1b46d189bed02fce1f03a529472}\index{HomeController@{HomeController}!Login@{Login}}
+\index{Login@{Login}!HomeController@{HomeController}}
+\doxysubsubsection{\texorpdfstring{Login()}{Login()}}
+{\footnotesize\ttfamily \label{class_home_controller_afef8d1b46d189bed02fce1f03a529472} 
+async Task$<$ IAction\+Result $>$ Home\+Controller.\+Login (\begin{DoxyParamCaption}\item[{string}]{email}{, }\item[{string}]{senha}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_home_controller_8cs_source_l00073}{73}} of file \mbox{\hyperlink{_home_controller_8cs_source}{Home\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00074\ \ \ \ \ \{}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrEmpty(email)\ ||\ \textcolor{keywordtype}{string}.IsNullOrEmpty(senha))}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ ViewData[\textcolor{stringliteral}{"{}Erro"{}}]\ =\ \textcolor{stringliteral}{"{}E-\/mail\ e\ senha\ são obrigatórios."{}};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View(\textcolor{stringliteral}{"{}Index"{}});}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ var\ alunoDoBanco\ =\ await\ \_context.Alunos}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .FirstOrDefaultAsync(\mbox{\hyperlink{jquery_8validate_8min_8js_aa4d4888597588a84fd5b1184d00c91f3}{a}}\ =>\ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4d4888597588a84fd5b1184d00c91f3}{a}}.Email\ ==\ email);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (alunoDoBanco\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ ViewData[\textcolor{stringliteral}{"{}Erro"{}}]\ =\ \textcolor{stringliteral}{"{}Usuário\ ou\ senha\ inválidos."{}};}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View(\textcolor{stringliteral}{"{}Index"{}});}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ senhaEstaCorreta\ =\ BCrypt.Net.BCrypt.Verify(senha,\ alunoDoBanco.Senha);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (senhaEstaCorreta)}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//return\ RedirectToAction("{}Dashboard"{});}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ RedirectToAction(\textcolor{stringliteral}{"{}Dashboard"{}},\ \textcolor{stringliteral}{"{}Home"{}});}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ ViewData[\textcolor{stringliteral}{"{}Erro"{}}]\ =\ \textcolor{stringliteral}{"{}Usuário\ ou\ senha\ inválidos."{}};}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View(\textcolor{stringliteral}{"{}Index"{}});}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00108\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_home_controller_a0ad6d4431a7729ac62fb5a1fd04e90a2}\index{HomeController@{HomeController}!RecuperarSenha@{RecuperarSenha}}
+\index{RecuperarSenha@{RecuperarSenha}!HomeController@{HomeController}}
+\doxysubsubsection{\texorpdfstring{RecuperarSenha()}{RecuperarSenha()}}
+{\footnotesize\ttfamily \label{class_home_controller_a0ad6d4431a7729ac62fb5a1fd04e90a2} 
+IAction\+Result Home\+Controller.\+Recuperar\+Senha (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_home_controller_8cs_source_l00023}{23}} of file \mbox{\hyperlink{_home_controller_8cs_source}{Home\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View();}
+\DoxyCodeLine{00026\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+FAQChat\+Bot/\+Controllers/\mbox{\hyperlink{_home_controller_8cs}{Home\+Controller.\+cs}}\end{DoxyCompactItemize}

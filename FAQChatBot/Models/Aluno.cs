@@ -11,23 +11,27 @@ namespace FAQChatBot.Models
 
         [Required(ErrorMessage = "O nome é obrigatório.")]
         [StringLength(100)]
-        public string Nome { get; set; }
+        public string Nome { get; set; } 
 
         [Required(ErrorMessage = "O CPF é obrigatório.")]
         [StringLength(14)]
-        public string CPF { get; set; } // Adicionado CPF
+        public string CPF { get; set; } 
 
         [Required(ErrorMessage = "O E-mail é obrigatório.")]
         [EmailAddress(ErrorMessage = "E-mail inválido.")]
         [StringLength(150)]
-        public string Email { get; set; }
+        public string Email { get; set; } 
 
         [Required(ErrorMessage = "O telefone é obrigatório.")]
         [StringLength(15)]
-        public string Telefone { get; set; }
+        public string Telefone { get; set; } 
 
         [Required(ErrorMessage = "A senha é obrigatória.")]
         [DataType(DataType.Password)]
-        public string Senha { get; set; } // Adicionado Senha
+
+        public string Senha { get; set; } 
+
+        public DateTime DataCadastro { get; set; }
+
     }
 }

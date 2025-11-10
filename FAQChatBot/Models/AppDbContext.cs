@@ -16,7 +16,5 @@ namespace FAQChatBot.Models
         public DbSet<OpcoesChatBot> OpcoesChatBots { get; set; }
         public DbSet<Conversa> Conversas { get; set; }
         public DbSet<Feedback> Feedbacks { get; set; }
-
-
     }
 }

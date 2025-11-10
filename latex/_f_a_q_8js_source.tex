@@ -1,0 +1,216 @@
+\doxysection{FAQ.\+js}
+\hypertarget{_f_a_q_8js_source}{}\label{_f_a_q_8js_source}\index{FAQChatBot/wwwroot/js/FAQ.js@{FAQChatBot/wwwroot/js/FAQ.js}}
+\mbox{\hyperlink{_f_a_q_8js}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00001}00001\ console.log(\textcolor{stringliteral}{"{}faq.js\ carregado"{}});}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00003}00003\ \mbox{\hyperlink{jquery_8js_af61dbe660d8213297c7fed5b5c99d223}{document}}.addEventListener(\textcolor{stringliteral}{"{}DOMContentLoaded"{}},\ \textcolor{keyword}{function}\ ()\ \{}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00004}00004\ \ \ \ \ \textcolor{keyword}{const}\ ajudaLink\ =\ \mbox{\hyperlink{jquery_8js_af61dbe660d8213297c7fed5b5c99d223}{document}}.getElementById(\textcolor{stringliteral}{"{}ajuda-\/link"{}});}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00005}00005\ \ \ \ \ \textcolor{keyword}{const}\ faqModal\ =\ \mbox{\hyperlink{jquery_8js_af61dbe660d8213297c7fed5b5c99d223}{document}}.getElementById(\textcolor{stringliteral}{"{}faq-\/modal"{}});}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00006}00006\ \ \ \ \ \textcolor{keyword}{const}\ closeFaq\ =\ \mbox{\hyperlink{jquery_8js_af61dbe660d8213297c7fed5b5c99d223}{document}}.getElementById(\textcolor{stringliteral}{"{}close-\/faq"{}});}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{const}\ faqSection\ =\ \mbox{\hyperlink{jquery_8js_af61dbe660d8213297c7fed5b5c99d223}{document}}.getElementById(\textcolor{stringliteral}{"{}faq-\/section"{}});}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00009}00009\ \ \ \ \ \textcolor{comment}{//\ Perguntas\ frequentes\ (completas)}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{const}\ faqs\ =\ [}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00011}00011\ \ \ \ \ \ \ \ \ \{\ \mbox{\hyperlink{bootstrap_8bundle_8min_8js_a2bc222bf1175cfcc7d051e7d7d291946}{q}}:\ \textcolor{stringliteral}{"{}Como\ acesso\ meus\ cursos?"{}},\ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4d4888597588a84fd5b1184d00c91f3}{a}}:\ \textcolor{stringliteral}{"{}Para\ acessar\ seus\ cursos,\ clique\ em\ 'Meus\ Cursos'\ no\ menu\ lateral.\ Lá\ você\ encontrará\ todos\ os\ cursos\ que\ adquiriu,\ com\ acesso\ aos\ módulos,\ aulas\ e\ atividades\ disponíveis."{}}\ \},}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00012}00012\ \ \ \ \ \ \ \ \ \{\ \mbox{\hyperlink{bootstrap_8bundle_8min_8js_a2bc222bf1175cfcc7d051e7d7d291946}{q}}:\ \textcolor{stringliteral}{"{}Posso\ estudar\ pelo\ celular?"{}},\ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4d4888597588a84fd5b1184d00c91f3}{a}}:\ \textcolor{stringliteral}{"{}Sim!\ Nossa\ plataforma\ é\ totalmente\ compatível\ com\ celulares\ e\ tablets,\ permitindo\ que\ você\ assista\ às\ aulas,\ realize\ atividades\ e\ acompanhe\ seu\ progresso\ de\ qualquer\ lugar."{}}\ \},}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00013}00013\ \ \ \ \ \ \ \ \ \{\ \mbox{\hyperlink{bootstrap_8bundle_8min_8js_a2bc222bf1175cfcc7d051e7d7d291946}{q}}:\ \textcolor{stringliteral}{"{}Esqueci\ minha\ senha,\ e\ agora?"{}},\ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4d4888597588a84fd5b1184d00c91f3}{a}}:\ \textcolor{stringliteral}{"{}Se\ você\ esqueceu\ sua\ senha,\ clique\ em\ 'Esqueci\ minha\ senha'\ na\ tela\ de\ login\ e\ siga\ os\ passos\ para\ redefinir\ sua\ senha\ de\ forma\ segura\ e\ rápida."{}}\ \},}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00014}00014\ \ \ \ \ \ \ \ \ \{\ \mbox{\hyperlink{bootstrap_8bundle_8min_8js_a2bc222bf1175cfcc7d051e7d7d291946}{q}}:\ \textcolor{stringliteral}{"{}Os\ cursos\ têm\ certificado?"{}},\ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4d4888597588a84fd5b1184d00c91f3}{a}}:\ \textcolor{stringliteral}{"{}Sim!\ Ao\ concluir\ um\ curso,\ o\ certificado\ é\ gerado\ automaticamente.\ Você\ poderá\ baixá-\/lo\ em\ PDF\ ou\ compartilhá-\/lo\ via\ link\ oficial\ diretamente\ do\ painel\ do\ curso."{}}\ \},}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00015}00015\ \ \ \ \ \ \ \ \ \{\ \mbox{\hyperlink{bootstrap_8bundle_8min_8js_a2bc222bf1175cfcc7d051e7d7d291946}{q}}:\ \textcolor{stringliteral}{"{}Como\ entro\ em\ contato\ com\ o\ suporte?"{}},\ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4d4888597588a84fd5b1184d00c91f3}{a}}:\ \textcolor{stringliteral}{"{}Nosso\ suporte\ está\ disponível\ via\ e-\/mail\ suporte@zeroum.com\ ou\ pelo\ chat\ da\ plataforma.\ Estamos\ prontos\ para\ esclarecer\ dúvidas\ sobre\ matrícula,\ acesso\ aos\ cursos,\ certificados\ e\ pagamentos."{}}\ \},}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00016}00016\ \ \ \ \ \ \ \ \ \{\ \mbox{\hyperlink{bootstrap_8bundle_8min_8js_a2bc222bf1175cfcc7d051e7d7d291946}{q}}:\ \textcolor{stringliteral}{"{}Como\ sei\ meu\ progresso\ nos\ cursos?"{}},\ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4d4888597588a84fd5b1184d00c91f3}{a}}:\ \textcolor{stringliteral}{"{}Você\ pode\ acompanhar\ seu\ progresso\ diretamente\ em\ cada\ card\ de\ curso\ no\ painel\ principal.\ Os\ módulos\ concluídos,\ atividades\ feitas\ e\ porcentagem\ de\ avanço\ ficam\ visíveis\ para\ facilitar\ seu\ acompanhamento."{}}\ \},}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00017}00017\ \ \ \ \ \ \ \ \ \{\ \mbox{\hyperlink{bootstrap_8bundle_8min_8js_a2bc222bf1175cfcc7d051e7d7d291946}{q}}:\ \textcolor{stringliteral}{"{}Posso\ baixar\ as\ aulas\ para\ assistir\ offline?"{}},\ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4d4888597588a84fd5b1184d00c91f3}{a}}:\ \textcolor{stringliteral}{"{}No\ momento,\ as\ aulas\ estão\ disponíveis\ apenas\ online.\ Recomendamos\ acesso\ à\ internet\ para\ assistir\ às\ aulas\ e\ realizar\ atividades."{}}\ \},}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00018}00018\ \ \ \ \ \ \ \ \ \{\ \mbox{\hyperlink{bootstrap_8bundle_8min_8js_a2bc222bf1175cfcc7d051e7d7d291946}{q}}:\ \textcolor{stringliteral}{"{}Os\ cursos\ têm\ prazo\ para\ conclusão?"{}},\ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4d4888597588a84fd5b1184d00c91f3}{a}}:\ \textcolor{stringliteral}{"{}Não!\ Você\ pode\ estudar\ no\ seu\ próprio\ ritmo.\ Não\ há\ prazos\ fixos\ para\ terminar\ os\ cursos,\ garantindo\ flexibilidade\ de\ acordo\ com\ sua\ disponibilidade."{}}\ \},}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00019}00019\ \ \ \ \ \ \ \ \ \{\ \mbox{\hyperlink{bootstrap_8bundle_8min_8js_a2bc222bf1175cfcc7d051e7d7d291946}{q}}:\ \textcolor{stringliteral}{"{}Há\ testes\ ou\ atividades\ nos\ cursos?"{}},\ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4d4888597588a84fd5b1184d00c91f3}{a}}:\ \textcolor{stringliteral}{"{}Sim!\ Muitos\ cursos\ incluem\ atividades\ de\ fixação\ e\ testes\ automáticos\ para\ reforçar\ o\ aprendizado\ e\ permitir\ que\ você\ avalie\ seu\ progresso\ durante\ o\ curso."{}}\ \},}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00020}00020\ \ \ \ \ \ \ \ \ \{\ \mbox{\hyperlink{bootstrap_8bundle_8min_8js_a2bc222bf1175cfcc7d051e7d7d291946}{q}}:\ \textcolor{stringliteral}{"{}Como\ posso\ mudar\ meu\ e-\/mail\ de\ login?"{}},\ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4d4888597588a84fd5b1184d00c91f3}{a}}:\ \textcolor{stringliteral}{"{}Para\ alterar\ seu\ e-\/mail\ de\ login,\ entre\ em\ contato\ com\ o\ suporte\ informando\ seu\ novo\ e-\/mail\ e\ solicitando\ a\ atualização\ de\ forma\ segura."{}}\ \},}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00021}00021\ \ \ \ \ \ \ \ \ \{\ \mbox{\hyperlink{bootstrap_8bundle_8min_8js_a2bc222bf1175cfcc7d051e7d7d291946}{q}}:\ \textcolor{stringliteral}{"{}Posso\ cancelar\ minha\ matrícula?"{}},\ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4d4888597588a84fd5b1184d00c91f3}{a}}:\ \textcolor{stringliteral}{"{}Sim,\ você\ pode\ cancelar\ sua\ matrícula\ a\ qualquer\ momento.\ Basta\ enviar\ uma\ solicitação\ ao\ suporte,\ informando\ o\ motivo\ do\ cancelamento,\ e\ sua\ matrícula\ será\ processada."{}}\ \},}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00022}00022\ \ \ \ \ \ \ \ \ \{\ \mbox{\hyperlink{bootstrap_8bundle_8min_8js_a2bc222bf1175cfcc7d051e7d7d291946}{q}}:\ \textcolor{stringliteral}{"{}Quais\ são\ as\ formas\ de\ pagamento\ disponíveis?"{}},\ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4d4888597588a84fd5b1184d00c91f3}{a}}:\ \textcolor{stringliteral}{"{}Aceitamos\ cartões\ de\ crédito,\ PIX\ e\ boleto\ bancário.\ As\ opções\ são\ exibidas\ no\ momento\ da\ compra\ do\ curso,\ e\ você\ pode\ consultar\ detalhes\ e\ histórico\ de\ pagamentos\ em\ sua\ conta."{}}\ \},}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00023}00023\ \ \ \ \ \ \ \ \ \{\ \mbox{\hyperlink{bootstrap_8bundle_8min_8js_a2bc222bf1175cfcc7d051e7d7d291946}{q}}:\ \textcolor{stringliteral}{"{}Qual\ idade\ mínima\ e\ os\ pré-\/requisitos\ para\ fazer\ um\ curso\ na\ Zero\ Um\ Cursos?"{}},\ \mbox{\hyperlink{jquery_8validate_8min_8js_aa4d4888597588a84fd5b1184d00c91f3}{a}}:\ \textcolor{stringliteral}{"{}Para\ se\ inscrever\ em\ nossos\ cursos,\ é\ necessário\ ter\ pelo\ menos\ 14\ anos,\ possuir\ CPF\ válido\ e\ uma\ conta\ de\ e-\/mail\ ativa\ para\ cadastro\ e\ comunicação."{}}\ \}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00024}00024\ \ \ \ \ ];}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00026}00026\ \ \ \ \ \textcolor{comment}{//\ Monta\ o\ HTML\ do\ FAQ\ mantendo\ o\ design\ original}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00027}00027\ \ \ \ \ faqSection.innerHTML\ =\ \`{}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00028}00028\ \ \ \ \ \ \ \ \ <h2\ style=\textcolor{stringliteral}{"{}color:\ \#fff;\ margin-\/bottom:10px;"{}}>❓\ Perguntas\ Frequentes</h2>}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00029}00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_0b}{\$}}\{faqs.map(\mbox{\hyperlink{jquery_8min_8js_a9cf09a2972472098a4c689fd988f4dfc}{f}}\ =>\ \`{}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}faq-\/item"{}}>}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <button\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}faq-\/question"{}}>\mbox{\hyperlink{class_0b}{\$}}\{\mbox{\hyperlink{jquery_8min_8js_a9cf09a2972472098a4c689fd988f4dfc}{f}}.q\}</button>}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}faq-\/answer"{}}\ style=\textcolor{stringliteral}{"{}display:none;"{}}>\mbox{\hyperlink{class_0b}{\$}}\{\mbox{\hyperlink{jquery_8min_8js_a9cf09a2972472098a4c689fd988f4dfc}{f}}.a\}</div>}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00034}00034\ \ \ \ \ \ \ \ \ \`{}).join(\textcolor{stringliteral}{''})\}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00035}00035\ \ \ \ \ \ \ \ \ <hr\ style=\textcolor{stringliteral}{"{}margin:15px\ 0;\ border:1px\ solid\ \#222;"{}}>}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00036}00036\ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}chatbot"{}}>}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ <h3\ style=\textcolor{stringliteral}{"{}color:\#9c45e8;\ text-\/align:center;"{}}>❓\ Ainda\ com\ dúvidas?</h3>}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ <\mbox{\hyperlink{jquery_8min_8js_a8c4bb014db8f5c540317a3b78d237be3}{p}}\ style=\textcolor{stringliteral}{"{}color:\#ccc;\ text-\/align:center;"{}}>Pergunte\ ao\ nosso\ assistente\ 🤖:</\mbox{\hyperlink{jquery_8min_8js_a8c4bb014db8f5c540317a3b78d237be3}{p}}>}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}chat-\/window"{}}\ style=\textcolor{stringliteral}{"{}}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00040}00040\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ background:\#111;}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00041}00041\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ height:150px;}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00042}00042\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ overflow-\/y:auto;}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00043}00043\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ border-\/radius:8px;}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00044}00044\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ padding:10px;}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00045}00045\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ margin-\/bottom:10px;}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00046}00046\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ border:1px\ solid\ \#222;}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00047}00047\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ "{}}></div>}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ <\mbox{\hyperlink{jquery_8js_a877535c3b6ffdf230bce90c82c597d17}{input}}\ \mbox{\hyperlink{jquery_8js_a3940565e83a9bfd10d95ffd27536da91}{type}}=\textcolor{stringliteral}{"{}text"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}user-\/input"{}}\ placeholder=\textcolor{stringliteral}{"{}Digite\ sua\ pergunta..."{}}\ style=\textcolor{stringliteral}{"{}}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00049}00049\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ width:80\%;}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00050}00050\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ padding:8px;}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00051}00051\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ border-\/radius:5px;}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00052}00052\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ border:none;}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00053}00053\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ outline:none;}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00054}00054\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ "{}}>}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ <button\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}send-\/btn"{}}\ style=\textcolor{stringliteral}{"{}}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00056}00056\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ background:\#9c45e8;}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00057}00057\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ color:white;}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00058}00058\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ border:none;}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00059}00059\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ padding:8px\ 12px;}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00060}00060\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ border-\/radius:5px;}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00061}00061\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cursor:pointer;}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00062}00062\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ font-\/weight:bold;}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00063}00063\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ "{}}>Enviar</button>}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00064}00064\ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00065}00065\ \ \ \ \ \`{};}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00067}00067\ \ \ \ \ \textcolor{comment}{//\ Inicializa\ elementos\ do\ chat}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00068}00068\ \ \ \ \ \textcolor{keyword}{const}\ chatWindow\ =\ \mbox{\hyperlink{jquery_8js_af61dbe660d8213297c7fed5b5c99d223}{document}}.getElementById(\textcolor{stringliteral}{"{}chat-\/window"{}});}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00069}00069\ \ \ \ \ \textcolor{keyword}{const}\ userInput\ =\ \mbox{\hyperlink{jquery_8js_af61dbe660d8213297c7fed5b5c99d223}{document}}.getElementById(\textcolor{stringliteral}{"{}user-\/input"{}});}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00070}00070\ \ \ \ \ \textcolor{keyword}{const}\ sendBtn\ =\ \mbox{\hyperlink{jquery_8js_af61dbe660d8213297c7fed5b5c99d223}{document}}.getElementById(\textcolor{stringliteral}{"{}send-\/btn"{}});}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00073}00073\ \ \ \ \ \textcolor{comment}{//\ Histórico\ de\ perguntas\ e\ respostas}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00074}00074\ \ \ \ \ let\ historico\ =\ [];}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00076}00076\ \ \ \ \ \textcolor{comment}{//\ Estado\ atual\ do\ chatbot}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00077}00077\ \ \ \ \ let\ etapa\ =\ \textcolor{stringliteral}{"{}boasVindas"{}};\ \textcolor{comment}{//\ boasVindas,\ perguntando,\ continuarOuParar,\ finalizar}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00079}00079\ \ }
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00080}00080\ \ \ \ \ \textcolor{keyword}{function}\ addMessage(sender,\ \mbox{\hyperlink{jquery_8js_a95b91e2a7e965b381c9e803999f9d290}{text}})\ \{}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ msgContainer\ =\ \mbox{\hyperlink{jquery_8js_af61dbe660d8213297c7fed5b5c99d223}{document}}.createElement(\textcolor{stringliteral}{"{}div"{}});}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00082}00082\ \ \ \ \ \ \ \ \ msgContainer.style.display\ =\ \textcolor{stringliteral}{"{}flex"{}};}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00083}00083\ \ \ \ \ \ \ \ \ msgContainer.style.justifyContent\ =\ sender\ ===\ \textcolor{stringliteral}{"{}bot"{}}\ ?\ \textcolor{stringliteral}{"{}flex-\/start"{}}\ :\ \textcolor{stringliteral}{"{}flex-\/end"{}};}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00084}00084\ \ \ \ \ \ \ \ \ msgContainer.style.margin\ =\ \textcolor{stringliteral}{"{}5px\ 0"{}};}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ msg\ =\ \mbox{\hyperlink{jquery_8js_af61dbe660d8213297c7fed5b5c99d223}{document}}.createElement(\textcolor{stringliteral}{"{}div"{}});}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00087}00087\ \ \ \ \ \ \ \ \ msg.style.padding\ =\ \textcolor{stringliteral}{"{}10px\ 14px"{}};}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00088}00088\ \ \ \ \ \ \ \ \ msg.style.borderRadius\ =\ \textcolor{stringliteral}{"{}12px"{}};}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00089}00089\ \ \ \ \ \ \ \ \ msg.style.maxWidth\ =\ \textcolor{stringliteral}{"{}70\%"{}};}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00090}00090\ \ \ \ \ \ \ \ \ msg.style.wordWrap\ =\ \textcolor{stringliteral}{"{}break-\/word"{}};}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00091}00091\ \ \ \ \ \ \ \ \ msg.style.whiteSpace\ =\ \textcolor{stringliteral}{"{}pre-\/wrap"{}};}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00092}00092\ \ \ \ \ \ \ \ \ msg.style.backgroundColor\ =\ sender\ ===\ \textcolor{stringliteral}{"{}bot"{}}\ ?\ \textcolor{stringliteral}{"{}\#f0f0f0"{}}\ :\ \textcolor{stringliteral}{"{}\#9c45e8"{}};}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00093}00093\ \ \ \ \ \ \ \ \ msg.style.color\ =\ sender\ ===\ \textcolor{stringliteral}{"{}bot"{}}\ ?\ \textcolor{stringliteral}{"{}\#000"{}}\ :\ \textcolor{stringliteral}{"{}\#fff"{}};}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00094}00094\ \ \ \ \ \ \ \ \ msg.textContent\ =\ \`{}\mbox{\hyperlink{class_0b}{\$}}\{sender\ ===\ \textcolor{stringliteral}{"{}bot"{}}\ ?\ \textcolor{stringliteral}{"{}🤖"{}}\ :\ \textcolor{stringliteral}{"{}🧑"{}}\}\ \mbox{\hyperlink{class_0b}{\$}}\{\mbox{\hyperlink{jquery_8js_a95b91e2a7e965b381c9e803999f9d290}{text}}\}\`{};}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00096}00096\ \ \ \ \ \ \ \ \ msgContainer.appendChild(msg);}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00097}00097\ \ \ \ \ \ \ \ \ chatWindow.appendChild(msgContainer);}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00098}00098\ \ \ \ \ \ \ \ \ chatWindow.scrollTop\ =\ chatWindow.scrollHeight;}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00099}00099\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00102}00102\ \ \ \ \ \textcolor{comment}{//\ Respostas\ automáticas}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00103}00103\ \ \ \ \ \textcolor{keyword}{const}\ respostas\ =\ \{}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00104}00104\ \ \ \ \ \ \ \ \ curso:\ \textcolor{stringliteral}{"{}Você\ pode\ acessar\ todos\ os\ seus\ cursos\ na\ aba\ 'Meus\ Cursos'.\ Cada\ curso\ mostra\ seu\ progresso,\ módulos\ disponíveis\ e\ materiais\ complementares.\ Além\ disso,\ você\ pode\ retomar\ de\ onde\ parou\ e\ acessar\ atividades\ de\ fixação\ online."{}},}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00105}00105\ \ \ \ \ \ \ \ \ senha:\ \textcolor{stringliteral}{"{}Se\ você\ esqueceu\ sua\ senha,\ clique\ em\ 'Esqueci\ minha\ senha'\ na\ tela\ de\ login\ e\ siga\ as\ instruções\ para\ redefinir\ sua\ senha\ de\ forma\ segura."{}},}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00106}00106\ \ \ \ \ \ \ \ \ certificado:\ \textcolor{stringliteral}{"{}Após\ concluir\ um\ curso,\ o\ certificado\ é\ gerado\ automaticamente.\ Você\ pode\ baixá-\/lo\ em\ PDF\ diretamente\ no\ seu\ painel\ de\ cursos\ ou\ compartilhar\ via\ link\ oficial\ fornecido\ pelo\ sistema."{}},}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00107}00107\ \ \ \ \ \ \ \ \ suporte:\ \textcolor{stringliteral}{"{}Nosso\ suporte\ está\ disponível\ via\ e-\/mail\ suporte@zeroum.com\ ou\ através\ deste\ chat.\ Estamos\ prontos\ para\ tirar\ dúvidas\ sobre\ matrícula,\ acesso\ aos\ cursos,\ certificados\ e\ pagamentos."{}},}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00108}00108\ \ \ \ \ \ \ \ \ celular:\ \textcolor{stringliteral}{"{}Sim!\ Nossa\ plataforma\ é\ totalmente\ compatível\ com\ celulares\ e\ tablets.\ Você\ consegue\ assistir\ às\ aulas,\ acessar\ materiais\ e\ realizar\ atividades\ diretamente\ do\ seu\ dispositivo\ móvel."{}},}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00109}00109\ \ \ \ \ \ \ \ \ idade:\ \textcolor{stringliteral}{"{}Para\ se\ inscrever\ em\ qualquer\ curso\ da\ Zero\ Um\ Cursos,\ é\ necessário\ ter\ no\ mínimo\ 14\ anos\ e\ possuir\ CPF\ válido,\ além\ de\ uma\ conta\ de\ e-\/mail\ ativa\ para\ cadastro."{}},}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00110}00110\ \ \ \ \ \ \ \ \ pagamento:\ \textcolor{stringliteral}{"{}Aceitamos\ diversas\ formas\ de\ pagamento:\ cartões\ de\ crédito,\ PIX\ e\ boleto\ bancário.\ As\ opções\ aparecem\ no\ momento\ da\ compra,\ e\ você\ pode\ consultar\ detalhes\ e\ histórico\ de\ pagamentos\ na\ sua\ conta."{}}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00111}00111\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00112}00112\ \ \ \ \ \textcolor{comment}{//\ Função\ para\ mostrar\ instruções\ iniciais}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00113}00113\ \ \ \ \ \textcolor{keyword}{function}\ instrucoes()\ \{}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00114}00114\ \ \ \ \ \ \ \ \ setTimeout(()\ =>\ addMessage(\textcolor{stringliteral}{"{}bot"{}},\ \textcolor{stringliteral}{"{}Você\ pode\ me\ perguntar\ sobre:\ 'curso',\ 'senha',\ 'certificado',\ 'suporte',\ 'celular',\ 'idade'\ ou\ 'pagamento'\ e\ mais."{}}),1000);}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00115}00115\ \ \ \ \ \ \ \ \ etapa\ =\ \textcolor{stringliteral}{"{}perguntando"{}};}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00116}00116\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00118}00118\ \ \ \ \ \textcolor{comment}{//\ Processa\ a\ pergunta\ do\ usuário}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00119}00119\ \ \ \ \ \textcolor{keyword}{function}\ processarPergunta(pergunta)\ \{}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00120}00120\ \ \ \ \ \ \ \ \ let\ resposta\ =\ \textcolor{stringliteral}{"{}Desculpe,\ não\ entendi\ sua\ pergunta.\ Pode\ reformular?"{}};}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00121}00121\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (let\ chave\ in\ respostas)\ \{}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pergunta.includes(chave))\ \{}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ resposta\ =\ respostas[chave];}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00126}00126\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00128}00128\ \ \ \ \ \ \ \ \ historico.push(\{\ pergunta:\ pergunta,\ resposta:\ resposta\ \});}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00129}00129\ \ \ \ \ \ \ \ \ setTimeout(()\ =>\ \ addMessage(\textcolor{stringliteral}{"{}bot"{}},\ resposta),500);}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00130}00130\ }
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00131}00131\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Segunda\ resposta\ do\ bot\ oferecendo\ continuar\ ou\ parar}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00132}00132\ \ \ \ \ \ \ \ \ setTimeout(()\ =>\ \{}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ setTimeout(()\ =>\ addMessage(\textcolor{stringliteral}{"{}bot"{}},\ \textcolor{stringliteral}{"{}Aqui\ está\ a\ informação\ que\ encontrei.\ Você\ quer\ continuar\ perguntando\ ou\ finalizar\ o\ chat?\ (responda\ 'continuar'\ ou\ 'parar')"{}}),\ 2500);}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ etapa\ =\ \textcolor{stringliteral}{"{}continuarOuParar"{}};}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00135}00135\ \ \ \ \ \ \ \ \ \},\ 600);}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00136}00136\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00137}00137\ }
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00138}00138\ \ \ \ \ \textcolor{comment}{//\ Finaliza\ o\ chat\ perguntando\ se\ resolveu}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00139}00139\ \ \ \ \ \textcolor{keyword}{function}\ finalizarChat()\ \{}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00140}00140\ \ \ \ \ \ \ \ \ setTimeout(()\ =>\ addMessage(\textcolor{stringliteral}{"{}bot"{}},\ \textcolor{stringliteral}{"{}Você\ conseguiu\ resolver\ seu\ problema?\ (responda\ 'sim'\ ou\ 'não')"{}}),\ 1000);}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00141}00141\ \ \ \ \ \ \ \ \ etapa\ =\ \textcolor{stringliteral}{"{}finalizar"{}};}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00142}00142\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00143}00143\ }
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00144}00144\ \ \ \ \ \textcolor{comment}{//\ Resposta\ final\ do\ bot}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00145}00145\ \ \ \ \ \textcolor{keyword}{function}\ respostaFinal(respostaUsuario)\ \{}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00146}00146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (respostaUsuario.toLowerCase()\ ===\ \textcolor{stringliteral}{"{}sim"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ setTimeout(()\ =>\ \ addMessage(\textcolor{stringliteral}{"{}bot"{}},\ \textcolor{stringliteral}{"{}Fico\ feliz\ em\ ter\ ajudado!\ 😊"{}}),\ 500);}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00148}00148\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ setTimeout(()\ =>\ addMessage(\textcolor{stringliteral}{"{}bot"{}},\ \textcolor{stringliteral}{"{}Desculpe\ por\ não\ conseguir\ ajudar\ completamente.\ 😔\ Entre\ em\ contato\ pelo\ email\ suporte@zeroum.com\ para\ mais\ detalhes."{}}),500);}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00150}00150\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00151}00151\ \ \ \ \ \ \ \ \ console.log(\textcolor{stringliteral}{"{}Histórico\ da\ conversa:"{}},\ historico);}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00152}00152\ \ \ \ \ \ \ \ \ etapa\ =\ \textcolor{stringliteral}{"{}concluido"{}};}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00153}00153\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00155}00155\ \ \ \ \ \textcolor{comment}{//\ Abrir\ modal}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00156}00156\ \ \ \ \ ajudaLink.addEventListener(\textcolor{stringliteral}{"{}click"{}},\ \textcolor{keyword}{function}\ (\mbox{\hyperlink{jquery_8min_8js_a2c038346d47955cbe2cb91e338edd7e1}{e}})\ \{}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00157}00157\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jquery_8min_8js_a2c038346d47955cbe2cb91e338edd7e1}{e}}.preventDefault();}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00158}00158\ \ \ \ \ \ \ \ \ faqModal.style.display\ =\ \textcolor{stringliteral}{"{}flex"{}};}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00159}00159\ \ \ \ \ \ \ \ \ chatWindow.innerHTML\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00160}00160\ \ \ \ \ \ \ \ \ addMessage(\textcolor{stringliteral}{"{}bot"{}},\ \textcolor{stringliteral}{"{}Olá,\ tudo\ bem?\ 😊\ Sou\ seu\ assistente\ virtual\ e\ estou\ aqui\ para\ ajudá-\/lo\ com\ qualquer\ dúvida\ sobre\ nosso\ site..."{}});}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00161}00161\ \ \ \ \ \ \ \ \ setTimeout(instrucoes,\ 500);}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00162}00162\ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00163}00163\ }
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00164}00164\ \ \ \ \ \textcolor{comment}{//\ Fechar\ modal}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00165}00165\ \ \ \ \ closeFaq.addEventListener(\textcolor{stringliteral}{"{}click"{}},\ ()\ =>\ faqModal.style.display\ =\ \textcolor{stringliteral}{"{}none"{}});}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00166}00166\ \ \ \ \ \mbox{\hyperlink{jquery_8js_ad55530ae1e5978df8e721017c1fc8466}{window}}.addEventListener(\textcolor{stringliteral}{"{}click"{}},\ \mbox{\hyperlink{jquery_8min_8js_a2c038346d47955cbe2cb91e338edd7e1}{e}}\ =>\ \{\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{jquery_8min_8js_a2c038346d47955cbe2cb91e338edd7e1}{e}}.target\ ===\ faqModal)\ faqModal.style.display\ =\ \textcolor{stringliteral}{"{}none"{}};\ \});}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00167}00167\ }
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00168}00168\ \ \ \ \ \textcolor{comment}{//\ Expande/recolhe\ respostas}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00169}00169\ \ \ \ \ \mbox{\hyperlink{jquery_8js_af61dbe660d8213297c7fed5b5c99d223}{document}}.querySelectorAll(\textcolor{stringliteral}{"{}.faq-\/question"{}}).forEach(btn\ =>\ \{}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00170}00170\ \ \ \ \ \ \ \ \ btn.addEventListener(\textcolor{stringliteral}{"{}click"{}},\ ()\ =>\ \{}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ ans\ =\ btn.nextElementSibling;}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ ans.style.display\ =\ ans.style.display\ ===\ \textcolor{stringliteral}{"{}block"{}}\ ?\ \textcolor{stringliteral}{"{}none"{}}\ :\ \textcolor{stringliteral}{"{}block"{}};}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00173}00173\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00174}00174\ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00175}00175\ }
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00176}00176\ \ \ \ \ \textcolor{comment}{//\ Envia\ pergunta\ e\ controla\ fluxo}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00177}00177\ \ \ \ \ sendBtn.addEventListener(\textcolor{stringliteral}{"{}click"{}},\ ()\ =>\ \{}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00178}00178\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ pergunta\ =\ userInput.value.trim().toLowerCase();}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00179}00179\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!pergunta)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00180}00180\ \ \ \ \ \ \ \ \ addMessage(\textcolor{stringliteral}{"{}user"{}},\ pergunta);}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00181}00181\ \ \ \ \ \ \ \ \ userInput.value\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00182}00182\ }
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00183}00183\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (etapa)\ \{}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}perguntando"{}}:}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ processarPergunta(pergunta);}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}continuarOuParar"{}}:}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pergunta\ ===\ \textcolor{stringliteral}{"{}continuar"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ instrucoes();}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (pergunta\ ===\ \textcolor{stringliteral}{"{}parar"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ finalizarChat();}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addMessage(\textcolor{stringliteral}{"{}bot"{}},\ \textcolor{stringliteral}{"{}Opção\ inválida!\ Por\ favor,\ responda\ 'continuar'\ ou\ 'parar'."{}});}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}finalizar"{}}:}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ([\textcolor{stringliteral}{"{}sim"{}},\textcolor{stringliteral}{"{}s"{}},\textcolor{stringliteral}{"{}Sim"{}},\textcolor{stringliteral}{"{}Não"{}},\textcolor{stringliteral}{"{}n"{}},\ \textcolor{stringliteral}{"{}não"{}},\ \textcolor{stringliteral}{"{}nao"{}}].includes(pergunta))\ \{}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ respostaFinal(pergunta);}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addMessage(\textcolor{stringliteral}{"{}bot"{}},\ \textcolor{stringliteral}{"{}Por\ favor,\ responda\ apenas\ 'sim'\ ou\ 'não'."{}});}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}concluido"{}}:}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addMessage(\textcolor{stringliteral}{"{}bot"{}},\ \textcolor{stringliteral}{"{}O\ chat\ foi\ finalizado.\ Se\ quiser,\ pode\ abrir\ novamente\ fechando\ a\ aba\ ajuda\ e\ abrindo\ novamente."{}});}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00206}00206\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00207}00207\ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00208}00208\ }
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00209}00209\ \ \ \ \ userInput.addEventListener(\textcolor{stringliteral}{"{}keypress"{}},\ \mbox{\hyperlink{jquery_8min_8js_a2c038346d47955cbe2cb91e338edd7e1}{e}}\ =>\ \{\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{jquery_8min_8js_a2c038346d47955cbe2cb91e338edd7e1}{e}}.key\ ===\ \textcolor{stringliteral}{"{}Enter"{}})\ sendBtn.click();\ \});}
+\DoxyCodeLine{\Hypertarget{_f_a_q_8js_source_l00210}00210\ \});}
+
+\end{DoxyCode}
