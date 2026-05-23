@@ -46,7 +46,7 @@ A **Zero Um Cursos** é uma plataforma EAD fictícia criada para o projeto. O si
  
 A documentação técnica inclui escopo, cronograma, regras de negócio, requisitos funcionais e não funcionais, 7 tipos de diagramas UML, manual de uso com interfaces, código-fonte comentado, diagrama ER e seção de segurança/LGPD.
  
-[Ver documentação completa (PDF)](./docs/PIM-IV-ZeroUmCursos.pdf)
+[Ver documentação completa (PDF)](./PIM-IV-ZeroUmCursos.pdf)
  
 ### Diagramas incluídos
  
